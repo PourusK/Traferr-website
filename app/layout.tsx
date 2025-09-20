@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import "./globals.css";
 
@@ -23,8 +24,11 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.svg" />
       </head>
       <body className="bg-slate-950 text-slate-100 antialiased">
-        <Header />
-        <main>{children}</main>
+        <div className="flex min-h-screen flex-col">
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
