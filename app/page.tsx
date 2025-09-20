@@ -1,4 +1,5 @@
 import HowItWorks from "@/components/HowItWorks";
+import Image from "next/image";
 import Link from "next/link";
 import { SectionLink } from "@/components/SectionLink";
 
@@ -24,7 +25,14 @@ export default function Home() {
           style={{ paddingBottom: "var(--section-padding-block)" }}
         >
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center">
-            <span className="inline-flex items-center rounded-full border border-sky-200 bg-white/80 px-5 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-sky-600">
+            <span className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-5 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-sky-600">
+              <Image
+                src="/traferr-logo.svg"
+                alt="Traferr logo"
+                width={20}
+                height={20}
+                className="h-5 w-5 drop-shadow-sm"
+              />
               <span className="bg-gradient-to-r from-orange-500 via-amber-400 to-pink-500 bg-clip-text text-transparent">
                 Traferr
               </span>

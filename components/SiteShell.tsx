@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ContactModal } from "./ContactModal";
@@ -33,8 +34,18 @@ export function SiteShell({ children }: SiteShellProps) {
     <div className="flex min-h-screen flex-col bg-white text-slate-900">
       <header className="border-b border-slate-200 bg-white/80 backdrop-blur">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4">
-          <Link href="/" className="text-lg font-semibold tracking-tight text-slate-900">
-            Traferr
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-lg font-semibold tracking-tight text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+          >
+            <Image
+              src="/traferr-logo.svg"
+              alt="Traferr logo"
+              width={28}
+              height={28}
+              className="h-7 w-7 drop-shadow-sm"
+            />
+            <span>Traferr</span>
           </Link>
           <nav className="hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex">
             {navigationLinks.map((link) => (
