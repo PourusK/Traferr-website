@@ -1,103 +1,138 @@
-import Image from "next/image";
+import Link from "next/link";
+
+import { SectionLink } from "@/components/SectionLink";
+
+const badges = [
+  "Connect to Locals",
+  "Largest Addressbook",
+  "Noise-free Conversations",
+];
+
+const steps = [
+  {
+    title: "Select a local",
+    description:
+      "Tell us where you are (or where you're heading) and pick someone who knows the neighborhood inside-out.",
+  },
+  {
+    title: "Ask",
+    description:
+      "Drop your question, whether it's about food, commutes, or cultural cues. No algorithmic walls—just people.",
+  },
+  {
+    title: "Get real answers",
+    description:
+      "Receive a direct, human response with context that maps to your day, not a generic listicle from years ago.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex flex-col gap-24 pb-24">
+      <section className="relative isolate overflow-hidden bg-gradient-to-b from-sky-50 via-white to-white">
+        <div className="pointer-events-none absolute -top-32 left-1/2 h-[480px] w-[480px] -translate-x-1/2 rounded-full bg-sky-200/40 blur-3xl" aria-hidden />
+        <div className="mx-auto flex w-full max-w-screen-xl flex-col items-start gap-10 px-4 pb-24 pt-28">
+          <div className="max-w-3xl space-y-6">
+            <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">
+              Conversations that start with curiosity
+            </p>
+            <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+              Have you talked to someone new today?
+            </h1>
+            <p className="text-lg leading-relaxed text-slate-700 sm:text-xl">
+              <span className="block">We’re more “connected” than ever, but it’s still hard to simply ask:</span>
+              <span className="block">Where’s the best shawarma in Karama? What’s the easiest way to commute in Wakayama?</span>
+              <span className="block">Traferr connects you directly to locals—no noise, just real answers.</span>
+            </p>
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-full bg-slate-900 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+            >
+              Start a conversation
+            </Link>
+            <SectionLink
+              targetId="how-it-works"
+              className="rounded-full border border-slate-200 bg-white/60 px-7 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+            >
+              See how it works
+            </SectionLink>
+          </div>
+          <div className="flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-wide text-slate-600">
+            {badges.map((badge) => (
+              <span
+                key={badge}
+                className="rounded-full border border-slate-200/60 bg-white/70 px-4 py-2 shadow-sm"
+              >
+                {badge}
+              </span>
+            ))}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      <section id="how-it-works" className="px-4">
+        <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-12 rounded-3xl border border-slate-200/70 bg-white/80 px-6 py-16 shadow-lg shadow-slate-200/50 backdrop-blur">
+          <div className="max-w-2xl space-y-4">
+            <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">How it works</p>
+            <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              Three steps to a real conversation
+            </h2>
+            <p className="text-base leading-relaxed text-slate-600">
+              Traferr removes the friction between your curiosity and the person who can answer it best.
+            </p>
+          </div>
+          <ol className="grid gap-6 sm:grid-cols-3">
+            {steps.map((step, index) => (
+              <li
+                key={step.title}
+                className="flex flex-col gap-4 rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm"
+              >
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-sky-100 text-sm font-semibold text-sky-700">
+                  {index + 1}
+                </span>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold text-slate-900">{step.title}</h3>
+                  <p className="text-sm leading-relaxed text-slate-600">{step.description}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section id="why-i-need-this" className="bg-slate-100/60 px-4 py-16 sm:py-20">
+        <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-10">
+          <div className="max-w-2xl space-y-4">
+            <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">Why I need this</p>
+            <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              Social feeds broadcast. Traferr has a back-and-forth.
+            </h2>
+            <p className="text-base leading-relaxed text-slate-600">
+              Skip the endless scroll and tap into someone who actually lives there. It’s faster, calmer, and finally personal.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            <article className="rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-slate-900">Endless social feeds</h3>
+              <ul className="mt-4 space-y-2 text-sm leading-relaxed text-slate-600">
+                <li>Everyone’s shouting, no one’s listening.</li>
+                <li>Recommendations drowned in ads and outdated threads.</li>
+                <li>You leave with more tabs, not clarity.</li>
+              </ul>
+            </article>
+            <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-slate-900">Direct conversation</h3>
+              <ul className="mt-4 space-y-2 text-sm leading-relaxed text-slate-600">
+                <li>Talk to the person who walks those streets every day.</li>
+                <li>Ask follow-ups instantly—no threads to refresh.</li>
+                <li>Walk away with confidence in your next move.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
