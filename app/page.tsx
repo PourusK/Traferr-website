@@ -25,17 +25,14 @@ export default function Home() {
           style={{ paddingBottom: "var(--section-padding-block)" }}
         >
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center">
-            <div className="relative inline-flex items-center gap-3 overflow-visible rounded-full border border-sky-200 bg-white/80 px-6 py-2 pl-16 text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-sky-600 shadow-sm">
-              <span className="pointer-events-none absolute -left-11 top-1/2 flex h-20 w-20 -translate-y-1/2 items-center justify-center">
-                <span className="absolute inset-0 rounded-full bg-gradient-to-br from-sky-300 via-sky-400 to-indigo-400 opacity-60 blur-2xl" />
-                <Image
-                  src="/traferr-logo.svg"
-                  alt="Traferr logo"
-                  width={64}
-                  height={64}
-                  className="relative h-12 w-12 drop-shadow-[0_18px_36px_rgba(56,189,248,0.45)]"
-                />
-              </span>
+            <div className="inline-flex items-center gap-4 rounded-full border border-sky-200 bg-white/80 px-6 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-sky-600 shadow-sm">
+              <Image
+                src="/traferr-logo.svg"
+                alt="Traferr logo"
+                width={96}
+                height={96}
+                className="h-12 w-auto"
+              />
               <span className="bg-gradient-to-r from-orange-500 via-amber-400 to-pink-500 bg-clip-text text-transparent">
                 Traferr
               </span>

@@ -67,9 +67,9 @@ export function Header() {
           <Image
             src="/traferr-logo.svg"
             alt="Traferr logo"
-            width={44}
-            height={44}
-            className="h-11 w-11 drop-shadow-[0_12px_24px_rgba(56,189,248,0.35)]"
+            width={64}
+            height={64}
+            className="h-11 w-auto"
             priority
           />
           <span className="text-xl font-black tracking-tight text-transparent bg-gradient-to-r from-sky-600 via-blue-500 to-indigo-500 bg-clip-text drop-shadow-sm sm:text-2xl md:text-3xl">
