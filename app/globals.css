@@ -1,27 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: dark;
-color-scheme: dark;
---background: #05070c;
---foreground: #eef3ff;
+  color-scheme: light;
+  /* Update these custom properties to tweak the global background theme in one place. */
+  --background-base: #f1f7ff;
+  --background-gradient:
+    radial-gradient(
+      120% 85% at 50% -10%,
+      rgba(152, 197, 255, 0.35) 0%,
+      rgba(214, 237, 255, 0.28) 35%,
+      rgba(241, 249, 255, 0) 70%
+    ),
+    linear-gradient(180deg, #f6fbff 0%, #e0f1ff 55%, #d9ecff 100%);
+  --foreground: #0f172a;
 }
 
 @theme inline {
-  --color-background: var(--background);
+  --color-background: var(--background-base);
   --color-foreground: var(--foreground);
 }
 
 body {
-  background-color: var(--background);
-  background-image:
-    radial-gradient(
-120% 75% at 50% 112%,
-rgba(80, 140, 255, 0.25) 0%,
-rgba(16, 26, 52, 0.06) 50%,
-rgba(5, 6, 8, 0) 75%
-),
-linear-gradient(180deg, #05070f 0%, #060913 45%, #0b1224 100%);
+  background-color: var(--background-base);
+  background-image: var(--background-gradient);
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: var(--foreground);
@@ -29,4 +30,6 @@ linear-gradient(180deg, #05070f 0%, #060913 45%, #0b1224 100%);
   min-height: 100vh;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}

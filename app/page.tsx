@@ -11,7 +11,7 @@ const badges = [
 export default function Home() {
   return (
     <div className="flex flex-col gap-24 pb-24">
-      <section className="relative isolate overflow-hidden bg-gradient-to-b from-sky-50 via-white to-white">
+      <section className="relative isolate overflow-hidden">
         <div
           className="pointer-events-none absolute inset-x-0 bottom-[-320px] h-[360px] rounded-full bg-sky-100 blur-3xl"
           aria-hidden
