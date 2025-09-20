@@ -126,7 +126,7 @@ export default function Home() {
                 </article>
               </div>
             </div>
-            <div className="relative isolate overflow-hidden rounded-3xl border border-sky-100 bg-white p-3 shadow-[0_24px_80px_-40px_rgba(56,189,248,0.55)]">
+            <div className="relative isolate overflow-hidden rounded-3xl border border-sky-100 bg-white p-3 shadow-[0_24px_80px_-40px_rgba(56,189,248,0.55)] lg:self-center">
               <div className="aspect-video w-full overflow-hidden rounded-2xl bg-gradient-to-br from-sky-100 via-white to-sky-50">
                 {/* Replace this placeholder with your embedded video when it’s ready. */}
                 <div className="flex h-full flex-col items-center justify-center gap-3 text-center text-slate-500">
