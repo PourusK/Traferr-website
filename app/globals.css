@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5faff;
-  --foreground: #0f172a;
+  color-scheme: dark;
+  --background: #050608;
+  --foreground: #e5ecff;
 }
 
 @theme inline {
@@ -12,6 +13,19 @@
 
 body {
   background-color: var(--background);
+  background-image:
+    radial-gradient(
+      120% 65% at 50% 110%,
+      rgba(80, 140, 255, 0.35),
+      rgba(16, 26, 52, 0.05) 45%,
+      rgba(5, 6, 8, 0)
+    ),
+    linear-gradient(180deg, #04050a 0%, #060912 35%, #0b1224 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: var(--foreground);
   font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  min-height: 100vh;
 }
+
+html { scroll-behavior: smooth; }
