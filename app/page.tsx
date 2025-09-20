@@ -31,7 +31,8 @@ export default function Home() {
                 alt="Traferr logo"
                 width={96}
                 height={96}
-                className="h-12 w-auto"
+                priority
+                style={{ width: 96, height: "auto" }}
               />
               <span className="bg-gradient-to-r from-orange-500 via-amber-400 to-pink-500 bg-clip-text text-transparent">
                 Traferr

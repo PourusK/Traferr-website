@@ -43,7 +43,7 @@ export function SiteShell({ children }: SiteShellProps) {
               alt="Traferr logo"
               width={64}
               height={64}
-              className="h-9 w-auto"
+              style={{ width: 64, height: "auto" }}
             />
             <span>Traferr</span>
           </Link>

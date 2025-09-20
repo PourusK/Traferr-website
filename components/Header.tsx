@@ -69,8 +69,8 @@ export function Header() {
             alt="Traferr logo"
             width={64}
             height={64}
-            className="h-11 w-auto"
             priority
+            style={{ width: 64, height: "auto" }}
           />
           <span className="text-xl font-black tracking-tight text-transparent bg-gradient-to-r from-sky-600 via-blue-500 to-indigo-500 bg-clip-text drop-shadow-sm sm:text-2xl md:text-3xl">
             Traferr
