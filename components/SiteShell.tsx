@@ -41,9 +41,9 @@ export function SiteShell({ children }: SiteShellProps) {
             <Image
               src="/traferr-logo.svg"
               alt="Traferr logo"
-              width={64}
-              height={64}
-              style={{ width: 64, height: "auto" }}
+              width={96}
+              height={120}
+              className="h-12 w-auto sm:h-14"
             />
             <span>Traferr</span>
           </Link>

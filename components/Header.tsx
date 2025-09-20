@@ -67,10 +67,10 @@ export function Header() {
           <Image
             src="/traferr-logo.svg"
             alt="Traferr logo"
-            width={64}
-            height={64}
+            width={96}
+            height={120}
             priority
-            style={{ width: 64, height: "auto" }}
+            className="h-12 w-auto sm:h-14"
           />
           <span className="text-xl font-black tracking-tight text-transparent bg-gradient-to-r from-sky-600 via-blue-500 to-indigo-500 bg-clip-text drop-shadow-sm sm:text-2xl md:text-3xl">
             Traferr
