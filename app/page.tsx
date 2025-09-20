@@ -1,177 +1,135 @@
 import Link from "next/link";
 
-const summaryCards = [
-  {
-    title: "Location",
-    metric: "120+ cities",
-    description: "Tap into trusted locals who know every alley and hidden gem.",
-  },
-  {
-    title: "Availability",
-    metric: "Live calendars",
-    description: "See when locals are free and sync effortlessly with your travelers.",
-  },
-  {
-    title: "Wallet summary",
-    metric: "Transparent payouts",
-    description: "Track balances, requests, and tips from a single dashboard.",
-  },
+import { SectionLink } from "@/components/SectionLink";
+
+const badges = [
+  "Connect to Locals",
+  "Largest Addressbook",
+  "Noise-free Conversations",
 ];
 
-const testimonials = [
+const steps = [
   {
-    name: "Amina Kale",
-    role: "Founder, Borderless Retreats",
-    quote:
-      "Traferr helped our guides meet guests at the perfect moment. The local insight is unbeatable.",
+    title: "Select a local",
+    description:
+      "Tell us where you are (or where you're heading) and pick someone who knows the neighborhood inside-out.",
   },
   {
-    name: "Jonah Mills",
-    role: "COO, Seekers Collective",
-    quote:
-      "The availability feed is a game changer. We can finally plan community trips with confidence.",
+    title: "Ask",
+    description:
+      "Drop your question, whether it's about food, commutes, or cultural cues. No algorithmic walls—just people.",
   },
   {
-    name: "Priya Desai",
-    role: "Host Network Lead, Wayfinders",
-    quote:
-      "Payments stay simple and transparent, so our locals focus on what they do best: welcoming travelers.",
+    title: "Get real answers",
+    description:
+      "Receive a direct, human response with context that maps to your day, not a generic listicle from years ago.",
   },
 ];
 
 export default function Home() {
   return (
-    <div className="space-y-24 pb-24">
-      <section className="relative overflow-hidden bg-sky-100/70">
-        <div className="absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-b from-sky-200/60 to-transparent" aria-hidden />
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 pb-24 pt-20 md:flex-row md:items-center">
-          <div className="max-w-2xl space-y-8">
-            <span className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-wide text-sky-700">
-              Built for travel collectives
-            </span>
-            <div className="space-y-4">
-              <h1 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
-                Traferr — connect with locals
-              </h1>
-              <p className="text-lg text-slate-700 sm:text-xl">
-                Match every traveler with a trusted host, sync real-time availability, and keep payments transparent—without piecing together endless spreadsheets.
-              </p>
-            </div>
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
-              >
-                Request early access
-              </Link>
-              <p className="text-sm text-slate-600 sm:ml-4">
-                Join the beta and bring locals into every itinerary.
-              </p>
-            </div>
-          </div>
-          <div className="relative w-full max-w-xl self-end rounded-3xl border border-sky-200 bg-white/80 p-6 shadow-lg shadow-sky-200/30 backdrop-blur">
-            <div className="space-y-6">
-              <h2 className="text-lg font-semibold text-slate-900">What you orchestrate</h2>
-              <ul className="space-y-4 text-sm text-slate-600">
-                <li className="rounded-2xl border border-slate-200 bg-white/60 px-4 py-3 shadow-sm">
-                  Curate locals with profiles that show language, specialties, and ratings in one glance.
-                </li>
-                <li className="rounded-2xl border border-slate-200 bg-white/60 px-4 py-3 shadow-sm">
-                  Auto-sync calendars across time zones so travelers always meet at the right moment.
-                </li>
-                <li className="rounded-2xl border border-slate-200 bg-white/60 px-4 py-3 shadow-sm">
-                  Offer seamless, secure payments that reward hosts instantly for unforgettable stays.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="mx-auto -mt-16 w-full max-w-5xl px-4">
-          <div className="grid gap-4 rounded-3xl border border-sky-100 bg-white/90 p-6 shadow-xl shadow-sky-200/40 backdrop-blur md:grid-cols-3">
-            {summaryCards.map((card) => (
-              <div key={card.title} className="rounded-2xl border border-slate-200 bg-white/70 p-5 shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">{card.title}</p>
-                <p className="mt-3 text-lg font-semibold text-slate-900">{card.metric}</p>
-                <p className="mt-2 text-sm text-slate-600">{card.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-4">
-        <div className="mx-auto grid w-full max-w-6xl gap-10 rounded-3xl border border-slate-200 bg-white/90 p-8 shadow-xl shadow-slate-200/60 backdrop-blur lg:grid-cols-[1.1fr_1fr]">
-          <div className="aspect-video overflow-hidden rounded-2xl border border-slate-100 bg-slate-200">
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0"
-              title="Founders note"
-              className="h-full w-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-          <div className="flex flex-col justify-center gap-6">
-            <div className="space-y-4">
-              <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">Founders note</p>
-              <h2 className="text-3xl font-semibold text-slate-900">Why Traferr exists</h2>
-              <p className="text-base text-slate-600">
-                We’ve organized retreats in 18 countries and learned that authentic moments hinge on local partners. Traferr was built to celebrate them—making coordination, payments, and trust effortless for every traveler you serve.
-              </p>
-            </div>
-            <p className="text-sm text-slate-500">
-              Hear from our team about how we’re co-creating the future of community-powered travel.
+    <div className="flex flex-col gap-24 pb-24">
+      <section className="relative isolate overflow-hidden bg-gradient-to-b from-sky-50 via-white to-white">
+        <div className="pointer-events-none absolute -top-32 left-1/2 h-[480px] w-[480px] -translate-x-1/2 rounded-full bg-sky-200/40 blur-3xl" aria-hidden />
+        <div className="mx-auto flex w-full max-w-screen-xl flex-col items-start gap-10 px-4 pb-24 pt-28">
+          <div className="max-w-3xl space-y-6">
+            <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">
+              Conversations that start with curiosity
+            </p>
+            <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+              Have you talked to someone new today?
+            </h1>
+            <p className="text-lg leading-relaxed text-slate-700 sm:text-xl">
+              <span className="block">We’re more “connected” than ever, but it’s still hard to simply ask:</span>
+              <span className="block">Where’s the best shawarma in Karama? What’s the easiest way to commute in Wakayama?</span>
+              <span className="block">Traferr connects you directly to locals—no noise, just real answers.</span>
             </p>
           </div>
-        </div>
-      </section>
-
-      <section className="bg-white/80 px-4">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 py-16">
-          <div className="space-y-4 text-center">
-            <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">Testimonials</p>
-            <h2 className="text-3xl font-semibold text-slate-900">Trusted by travel builders</h2>
-            <p className="mx-auto max-w-2xl text-base text-slate-600">
-              Leaders shaping the future of immersive journeys choose Traferr to keep every experience human, local, and unforgettable.
-            </p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {testimonials.map((testimonial) => (
-              <article
-                key={testimonial.name}
-                className="flex h-full flex-col justify-between rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-lg shadow-slate-200/60"
-              >
-                <p className="text-sm text-slate-600">“{testimonial.quote}”</p>
-                <div className="mt-6 space-y-1">
-                  <p className="text-sm font-semibold text-slate-900">{testimonial.name}</p>
-                  <p className="text-xs uppercase tracking-wide text-slate-500">{testimonial.role}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-4">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 rounded-3xl border border-slate-200 bg-gradient-to-r from-sky-500 to-sky-600 p-10 text-white shadow-xl shadow-sky-300/50 md:flex-row md:items-center md:justify-between">
-          <div className="max-w-2xl space-y-3">
-            <h2 className="text-3xl font-semibold">Bring locals into your next itinerary</h2>
-            <p className="text-sm text-sky-100">
-              Whether you run a boutique agency or a global collective, Traferr equips your team with the local partnerships that build trust instantly.
-            </p>
-          </div>
-          <div className="flex flex-col gap-3 text-sm font-semibold md:flex-row">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-white/90 px-5 py-3 text-slate-900 transition hover:bg-white"
+              className="inline-flex items-center justify-center rounded-full bg-slate-900 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
             >
-              Talk with us
+              Start a conversation
             </Link>
-            <Link
-              href="/legal/privacy"
-              className="inline-flex items-center justify-center rounded-full bg-sky-700/40 px-5 py-3 text-white transition hover:bg-sky-700/60"
+            <SectionLink
+              targetId="how-it-works"
+              className="rounded-full border border-slate-200 bg-white/60 px-7 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
             >
-              Review our privacy approach
-            </Link>
+              See how it works
+            </SectionLink>
+          </div>
+          <div className="flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-wide text-slate-600">
+            {badges.map((badge) => (
+              <span
+                key={badge}
+                className="rounded-full border border-slate-200/60 bg-white/70 px-4 py-2 shadow-sm"
+              >
+                {badge}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" className="px-4">
+        <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-12 rounded-3xl border border-slate-200/70 bg-white/80 px-6 py-16 shadow-lg shadow-slate-200/50 backdrop-blur">
+          <div className="max-w-2xl space-y-4">
+            <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">How it works</p>
+            <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              Three steps to a real conversation
+            </h2>
+            <p className="text-base leading-relaxed text-slate-600">
+              Traferr removes the friction between your curiosity and the person who can answer it best.
+            </p>
+          </div>
+          <ol className="grid gap-6 sm:grid-cols-3">
+            {steps.map((step, index) => (
+              <li
+                key={step.title}
+                className="flex flex-col gap-4 rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm"
+              >
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-sky-100 text-sm font-semibold text-sky-700">
+                  {index + 1}
+                </span>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold text-slate-900">{step.title}</h3>
+                  <p className="text-sm leading-relaxed text-slate-600">{step.description}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section id="why-i-need-this" className="bg-slate-100/60 px-4 py-16 sm:py-20">
+        <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-10">
+          <div className="max-w-2xl space-y-4">
+            <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">Why I need this</p>
+            <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              Social feeds broadcast. Traferr has a back-and-forth.
+            </h2>
+            <p className="text-base leading-relaxed text-slate-600">
+              Skip the endless scroll and tap into someone who actually lives there. It’s faster, calmer, and finally personal.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            <article className="rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-slate-900">Endless social feeds</h3>
+              <ul className="mt-4 space-y-2 text-sm leading-relaxed text-slate-600">
+                <li>Everyone’s shouting, no one’s listening.</li>
+                <li>Recommendations drowned in ads and outdated threads.</li>
+                <li>You leave with more tabs, not clarity.</li>
+              </ul>
+            </article>
+            <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-slate-900">Direct conversation</h3>
+              <ul className="mt-4 space-y-2 text-sm leading-relaxed text-slate-600">
+                <li>Talk to the person who walks those streets every day.</li>
+                <li>Ask follow-ups instantly—no threads to refresh.</li>
+                <li>Walk away with confidence in your next move.</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
