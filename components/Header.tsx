@@ -5,10 +5,27 @@ import { useEffect, useState } from "react";
 
 import { SectionLink } from "./SectionLink";
 
-const navigation = [
+type SectionNavItem = {
+  label: string;
+  targetId: string;
+  href?: undefined;
+};
+
+type LinkNavItem = {
+  label: string;
+  href: string;
+  targetId?: undefined;
+};
+
+const navigation: Array<SectionNavItem | LinkNavItem> = [
   { label: "How it works", targetId: "how-it-works" },
   { label: "Why I need this", targetId: "why-i-need-this" },
+  { label: "FAQ", href: "/faq" },
 ];
+
+function isSectionNavItem(item: SectionNavItem | LinkNavItem): item is SectionNavItem {
+  return Object.prototype.hasOwnProperty.call(item, "targetId");
+}
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,15 +74,25 @@ export function Header() {
           Traferr
         </Link>
         <nav className="hidden items-center gap-8 text-sm font-medium text-slate-300 md:flex">
-          {navigation.map((item) => (
-            <SectionLink
-              key={item.targetId}
-              targetId={item.targetId}
-              className="rounded-full px-3 py-1 text-slate-300 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
-            >
-              {item.label}
-            </SectionLink>
-          ))}
+          {navigation.map((item) =>
+            isSectionNavItem(item) ? (
+              <SectionLink
+                key={item.targetId}
+                targetId={item.targetId}
+                className="rounded-full px-3 py-1 text-slate-300 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+              >
+                {item.label}
+              </SectionLink>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="rounded-full px-3 py-1 text-slate-300 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+              >
+                {item.label}
+              </Link>
+            )
+          )}
         </nav>
         <button
           type="button"
@@ -90,16 +117,27 @@ export function Header() {
       {isMenuOpen ? (
         <div className="border-t border-slate-800/70 bg-slate-950/90 px-4 py-3 shadow-lg backdrop-blur md:hidden">
           <div className="flex flex-col gap-2 text-sm font-medium text-slate-200">
-            {navigation.map((item) => (
-              <SectionLink
-                key={item.targetId}
-                targetId={item.targetId}
-                onNavigate={() => setIsMenuOpen(false)}
-                className="rounded-full px-4 py-2 text-left hover:bg-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
-              >
-                {item.label}
-              </SectionLink>
-            ))}
+            {navigation.map((item) =>
+              isSectionNavItem(item) ? (
+                <SectionLink
+                  key={item.targetId}
+                  targetId={item.targetId}
+                  onNavigate={() => setIsMenuOpen(false)}
+                  className="rounded-full px-4 py-2 text-left hover:bg-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+                >
+                  {item.label}
+                </SectionLink>
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="rounded-full px-4 py-2 text-left hover:bg-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
           </div>
         </div>
       ) : null}

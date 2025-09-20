@@ -48,26 +48,23 @@ export function Footer() {
             <p className="text-sm font-semibold uppercase tracking-wide text-slate-200">
               FAQ &amp; Support
             </p>
-            <ul className="space-y-3 text-sm text-slate-400">
-              <li>
-                <p className="font-medium text-slate-100">How quickly do locals respond?</p>
-                <p className="text-slate-400">
-                  Most Traferr guides reply within a few hours, so you&apos;re never waiting long for clarity.
-                </p>
-              </li>
-              <li>
-                <p className="font-medium text-slate-100">Can I follow up after the first answer?</p>
-                <p className="text-slate-400">
-                  Absolutely—continue the chat until you&apos;re confident about your next move.
-                </p>
-              </li>
-            </ul>
-            <Link
-              href="/contact"
-              className="inline-flex items-center text-sm font-semibold text-sky-300 transition hover:text-sky-200"
-            >
-              Contact us
-            </Link>
+            <p className="text-sm leading-relaxed text-slate-400">
+              Explore answers from the Traferr team or reach out directly—we&apos;re always listening.
+            </p>
+            <div className="flex flex-col gap-2 text-sm font-semibold">
+              <Link
+                href="/faq"
+                className="inline-flex items-center text-sky-300 transition hover:text-sky-200"
+              >
+                Browse FAQs
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center text-sky-300 transition hover:text-sky-200"
+              >
+                Contact us
+              </Link>
+            </div>
           </div>
 
           <div className="space-y-4">
