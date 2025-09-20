@@ -1,3 +1,4 @@
+import HowItWorks from "@/components/HowItWorks";
 import Link from "next/link";
 
 import { SectionLink } from "@/components/SectionLink";
@@ -6,24 +7,6 @@ const badges = [
   "Connect to Locals",
   "Largest Addressbook",
   "Noise-free Conversations",
-];
-
-const steps = [
-  {
-    title: "Select a local",
-    description:
-      "Tell us where you are (or where you're heading) and pick someone who knows the neighborhood inside-out.",
-  },
-  {
-    title: "Ask",
-    description:
-      "Drop your question, whether it's about food, commutes, or cultural cues. No algorithmic walls—just people.",
-  },
-  {
-    title: "Get real answers",
-    description:
-      "Receive a direct, human response with context that maps to your day, not a generic listicle from years ago.",
-  },
 ];
 
 export default function Home() {
@@ -88,35 +71,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how-it-works" className="px-4">
-        <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-12 rounded-3xl border border-slate-200 bg-white px-6 py-16 shadow-xl shadow-sky-100/40">
-          <div className="max-w-2xl space-y-4">
-            <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">How it works</p>
-            <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-              Three steps to a real conversation
-            </h2>
-            <p className="text-base leading-relaxed text-slate-600">
-              Traferr removes the friction between your curiosity and the person who can answer it best.
-            </p>
-          </div>
-          <ol className="grid gap-6 sm:grid-cols-3">
-            {steps.map((step, index) => (
-              <li
-                key={step.title}
-                className="flex flex-col gap-4 rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm"
-              >
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-sky-100 text-sm font-semibold text-sky-600">
-                  {index + 1}
-                </span>
-                <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-slate-900">{step.title}</h3>
-                  <p className="text-sm leading-relaxed text-slate-600">{step.description}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
+      {/* HOW IT WORKS */}
+      <HowItWorks />
 
       <section id="why-i-need-this" className="px-4">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-10 rounded-3xl border border-slate-200 bg-slate-50 px-6 py-16 shadow-xl shadow-sky-100/40">
