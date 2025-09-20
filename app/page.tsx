@@ -1,103 +1,180 @@
-import Image from "next/image";
+import Link from "next/link";
+
+const summaryCards = [
+  {
+    title: "Location",
+    metric: "120+ cities",
+    description: "Tap into trusted locals who know every alley and hidden gem.",
+  },
+  {
+    title: "Availability",
+    metric: "Live calendars",
+    description: "See when locals are free and sync effortlessly with your travelers.",
+  },
+  {
+    title: "Wallet summary",
+    metric: "Transparent payouts",
+    description: "Track balances, requests, and tips from a single dashboard.",
+  },
+];
+
+const testimonials = [
+  {
+    name: "Amina Kale",
+    role: "Founder, Borderless Retreats",
+    quote:
+      "Traferr helped our guides meet guests at the perfect moment. The local insight is unbeatable.",
+  },
+  {
+    name: "Jonah Mills",
+    role: "COO, Seekers Collective",
+    quote:
+      "The availability feed is a game changer. We can finally plan community trips with confidence.",
+  },
+  {
+    name: "Priya Desai",
+    role: "Host Network Lead, Wayfinders",
+    quote:
+      "Payments stay simple and transparent, so our locals focus on what they do best: welcoming travelers.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="space-y-24 pb-24">
+      <section className="relative overflow-hidden bg-sky-100/70">
+        <div className="absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-b from-sky-200/60 to-transparent" aria-hidden />
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 pb-24 pt-20 md:flex-row md:items-center">
+          <div className="max-w-2xl space-y-8">
+            <span className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-wide text-sky-700">
+              Built for travel collectives
+            </span>
+            <div className="space-y-4">
+              <h1 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+                Traferr — connect with locals
+              </h1>
+              <p className="text-lg text-slate-700 sm:text-xl">
+                Match every traveler with a trusted host, sync real-time availability, and keep payments transparent—without piecing together endless spreadsheets.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+              >
+                Request early access
+              </Link>
+              <p className="text-sm text-slate-600 sm:ml-4">
+                Join the beta and bring locals into every itinerary.
+              </p>
+            </div>
+          </div>
+          <div className="relative w-full max-w-xl self-end rounded-3xl border border-sky-200 bg-white/80 p-6 shadow-lg shadow-sky-200/30 backdrop-blur">
+            <div className="space-y-6">
+              <h2 className="text-lg font-semibold text-slate-900">What you orchestrate</h2>
+              <ul className="space-y-4 text-sm text-slate-600">
+                <li className="rounded-2xl border border-slate-200 bg-white/60 px-4 py-3 shadow-sm">
+                  Curate locals with profiles that show language, specialties, and ratings in one glance.
+                </li>
+                <li className="rounded-2xl border border-slate-200 bg-white/60 px-4 py-3 shadow-sm">
+                  Auto-sync calendars across time zones so travelers always meet at the right moment.
+                </li>
+                <li className="rounded-2xl border border-slate-200 bg-white/60 px-4 py-3 shadow-sm">
+                  Offer seamless, secure payments that reward hosts instantly for unforgettable stays.
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="mx-auto -mt-16 w-full max-w-5xl px-4">
+          <div className="grid gap-4 rounded-3xl border border-sky-100 bg-white/90 p-6 shadow-xl shadow-sky-200/40 backdrop-blur md:grid-cols-3">
+            {summaryCards.map((card) => (
+              <div key={card.title} className="rounded-2xl border border-slate-200 bg-white/70 p-5 shadow-sm">
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">{card.title}</p>
+                <p className="mt-3 text-lg font-semibold text-slate-900">{card.metric}</p>
+                <p className="mt-2 text-sm text-slate-600">{card.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4">
+        <div className="mx-auto grid w-full max-w-6xl gap-10 rounded-3xl border border-slate-200 bg-white/90 p-8 shadow-xl shadow-slate-200/60 backdrop-blur lg:grid-cols-[1.1fr_1fr]">
+          <div className="aspect-video overflow-hidden rounded-2xl border border-slate-100 bg-slate-200">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0"
+              title="Founders note"
+              className="h-full w-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <div className="flex flex-col justify-center gap-6">
+            <div className="space-y-4">
+              <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">Founders note</p>
+              <h2 className="text-3xl font-semibold text-slate-900">Why Traferr exists</h2>
+              <p className="text-base text-slate-600">
+                We’ve organized retreats in 18 countries and learned that authentic moments hinge on local partners. Traferr was built to celebrate them—making coordination, payments, and trust effortless for every traveler you serve.
+              </p>
+            </div>
+            <p className="text-sm text-slate-500">
+              Hear from our team about how we’re co-creating the future of community-powered travel.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white/80 px-4">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 py-16">
+          <div className="space-y-4 text-center">
+            <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">Testimonials</p>
+            <h2 className="text-3xl font-semibold text-slate-900">Trusted by travel builders</h2>
+            <p className="mx-auto max-w-2xl text-base text-slate-600">
+              Leaders shaping the future of immersive journeys choose Traferr to keep every experience human, local, and unforgettable.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {testimonials.map((testimonial) => (
+              <article
+                key={testimonial.name}
+                className="flex h-full flex-col justify-between rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-lg shadow-slate-200/60"
+              >
+                <p className="text-sm text-slate-600">“{testimonial.quote}”</p>
+                <div className="mt-6 space-y-1">
+                  <p className="text-sm font-semibold text-slate-900">{testimonial.name}</p>
+                  <p className="text-xs uppercase tracking-wide text-slate-500">{testimonial.role}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 rounded-3xl border border-slate-200 bg-gradient-to-r from-sky-500 to-sky-600 p-10 text-white shadow-xl shadow-sky-300/50 md:flex-row md:items-center md:justify-between">
+          <div className="max-w-2xl space-y-3">
+            <h2 className="text-3xl font-semibold">Bring locals into your next itinerary</h2>
+            <p className="text-sm text-sky-100">
+              Whether you run a boutique agency or a global collective, Traferr equips your team with the local partnerships that build trust instantly.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3 text-sm font-semibold md:flex-row">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-full bg-white/90 px-5 py-3 text-slate-900 transition hover:bg-white"
+            >
+              Talk with us
+            </Link>
+            <Link
+              href="/legal/privacy"
+              className="inline-flex items-center justify-center rounded-full bg-sky-700/40 px-5 py-3 text-white transition hover:bg-sky-700/60"
+            >
+              Review our privacy approach
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
