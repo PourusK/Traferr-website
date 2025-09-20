@@ -13,6 +13,9 @@
     ),
     linear-gradient(180deg, #f6fbff 0%, #e0f1ff 55%, #d9ecff 100%);
   --foreground: #0f172a;
+  /* Adjust these to keep vertical rhythm consistent across sections. */
+  --section-gap: clamp(2rem, 1.2vw + 1.35rem, 2.75rem);
+  --section-padding-block: clamp(2.25rem, 1.5vw + 1.5rem, 3rem);
 }
 
 @theme inline {

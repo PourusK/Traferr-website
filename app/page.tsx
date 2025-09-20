@@ -10,13 +10,19 @@ const badges = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-24 pb-24">
+    <div
+      className="flex flex-col"
+      style={{ gap: "var(--section-gap)", paddingBottom: "var(--section-gap)" }}
+    >
       <section className="relative isolate overflow-hidden">
         <div
           className="pointer-events-none absolute inset-x-0 bottom-[-320px] h-[360px] rounded-full bg-sky-100 blur-3xl"
           aria-hidden
         />
-        <div className="mx-auto w-full max-w-screen-xl px-4 pb-24 pt-28 sm:pt-32">
+        <div
+          className="mx-auto w-full max-w-screen-xl px-4 pt-24 sm:pt-28 lg:pt-32"
+          style={{ paddingBottom: "var(--section-padding-block)" }}
+        >
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center">
             <span className="inline-flex items-center rounded-full border border-sky-200 bg-white/80 px-5 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-sky-600">
               <span className="bg-gradient-to-r from-orange-500 via-amber-400 to-pink-500 bg-clip-text text-transparent">
@@ -80,7 +86,13 @@ export default function Home() {
       <HowItWorks />
 
       <section id="why-i-need-this" className="px-4">
-        <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-10 rounded-3xl border border-slate-200 bg-slate-50 px-6 py-16 shadow-xl shadow-sky-100/40">
+        <div
+          className="mx-auto flex w-full max-w-screen-xl flex-col gap-10 rounded-3xl border border-slate-200 bg-slate-50 px-6 shadow-xl shadow-sky-100/40"
+          style={{
+            paddingTop: "var(--section-padding-block)",
+            paddingBottom: "var(--section-padding-block)",
+          }}
+        >
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-start">
             <div className="flex flex-col gap-8">
               <div className="max-w-2xl space-y-4">

@@ -26,7 +26,13 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="scroll-mt-24">
-      <div className="mx-auto w-full max-w-screen-xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <div
+        className="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8"
+        style={{
+          paddingTop: "var(--section-padding-block)",
+          paddingBottom: "var(--section-padding-block)",
+        }}
+      >
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-sky-700">
             How it works
