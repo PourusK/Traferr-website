@@ -22,7 +22,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.svg" />
       </head>
-      <body className="bg-slate-50 text-slate-900 antialiased">
+      <body className="bg-slate-950 text-slate-100 antialiased">
         <Header />
         <main>{children}</main>
       </body>
