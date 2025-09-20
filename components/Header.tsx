@@ -61,7 +61,7 @@ export function Header() {
       <div className="mx-auto flex w-full max-w-screen-xl items-center justify-between px-4 py-4">
         <Link
           href="/"
-          className="text-lg font-semibold tracking-tight text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-pink-500 bg-clip-text"
+          className="text-xl font-black tracking-tight text-transparent bg-gradient-to-r from-sky-600 via-blue-500 to-indigo-500 bg-clip-text drop-shadow-sm sm:text-2xl md:text-3xl"
         >
           Traferr
         </Link>
