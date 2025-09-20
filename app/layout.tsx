@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { SiteShell } from "@/components/SiteShell";
+
+import { Header } from "@/components/Header";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Traferr — connect with locals",
+  title: "Traferr — talk to locals without the noise",
   description:
-    "Traferr pairs travelers with locals for trusted recommendations, flexible availability, and transparent payments.",
+    "Traferr connects you directly with locals so you can ask real questions and get honest answers in minutes.",
   icons: {
     icon: "/favicon.svg",
   },
@@ -18,8 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
-        <SiteShell>{children}</SiteShell>
+      <head>
+        <link rel="icon" href="/favicon.svg" />
+      </head>
+      <body className="bg-slate-950 text-slate-100 antialiased">
+        <Header />
+        <main>{children}</main>
       </body>
     </html>
   );
