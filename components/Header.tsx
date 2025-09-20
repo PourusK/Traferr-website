@@ -42,21 +42,23 @@ export function Header() {
     <header
       className={[
         "sticky inset-x-0 top-0 z-50 border-b border-transparent transition-colors duration-300",
-        isScrolled ? "border-slate-800/60 bg-slate-950/80 backdrop-blur" : "bg-transparent",
+        isScrolled
+          ? "border-slate-200/70 bg-white/70 backdrop-blur shadow-sm"
+          : "bg-transparent",
       ]
         .filter(Boolean)
         .join(" ")}
     >
       <div className="mx-auto flex w-full max-w-screen-xl items-center justify-between px-4 py-4">
-        <Link href="/" className="text-lg font-semibold tracking-tight text-white">
+        <Link href="/" className="text-lg font-semibold tracking-tight text-slate-900">
           Traferr
         </Link>
-        <nav className="hidden items-center gap-8 text-sm font-medium text-slate-300 md:flex">
+        <nav className="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex">
           {navigation.map((item) => (
             <SectionLink
               key={item.targetId}
               targetId={item.targetId}
-              className="rounded-full px-2 py-1 text-slate-300 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+              className="rounded-full px-2 py-1 text-slate-600 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
             >
               {item.label}
             </SectionLink>
@@ -65,7 +67,7 @@ export function Header() {
         <button
           type="button"
           onClick={() => setIsMenuOpen((value) => !value)}
-          className="inline-flex items-center justify-center rounded-full p-2 text-slate-200 transition hover:bg-slate-800/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 md:hidden"
+          className="inline-flex items-center justify-center rounded-full p-2 text-slate-700 transition hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 md:hidden"
           aria-label="Toggle navigation"
           aria-expanded={isMenuOpen}
         >
@@ -83,14 +85,14 @@ export function Header() {
         </button>
       </div>
       {isMenuOpen ? (
-        <div className="border-t border-slate-800/70 bg-slate-900/90 px-4 py-3 shadow-sm backdrop-blur md:hidden">
-          <div className="flex flex-col gap-2 text-sm font-medium text-slate-200">
+        <div className="border-t border-slate-200 bg-white/85 px-4 py-3 shadow-sm backdrop-blur md:hidden">
+          <div className="flex flex-col gap-2 text-sm font-medium text-slate-700">
             {navigation.map((item) => (
               <SectionLink
                 key={item.targetId}
                 targetId={item.targetId}
                 onNavigate={() => setIsMenuOpen(false)}
-                className="rounded-full px-4 py-2 text-left text-slate-200 hover:bg-slate-800/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+                className="rounded-full px-4 py-2 text-left hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
               >
                 {item.label}
               </SectionLink>
