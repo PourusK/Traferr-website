@@ -43,19 +43,23 @@ export default function HowItWorks() {
           {steps.map((s) => (
             <article
               key={s.n}
-              className="relative flex h-full flex-col items-center rounded-3xl border border-slate-200 bg-white px-6 pb-10 pt-24 text-center shadow-sm shadow-slate-900/5 transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-100/60"
+              className="relative flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-8 text-left shadow-sm shadow-slate-900/5 transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-100/60"
             >
-              <div className="pointer-events-none absolute -top-16 left-1/2 flex -translate-x-1/2 justify-center">
-                <div className="rounded-[36px] bg-gradient-to-b from-slate-100 via-white to-slate-50 p-3 shadow-lg ring-1 ring-white/80">
-                  <IPhoneFrame src="/app-screenshot.png" size="sm" />
+              <div className="flex flex-col items-start gap-6 sm:flex-row">
+                <IPhoneFrame
+                  src="/app-screenshot.png"
+                  size="xs"
+                  className="mx-0 shrink-0 drop-shadow-[0_18px_40px_rgba(15,23,42,0.25)]"
+                />
+
+                <div className="text-left">
+                  <span className="block text-xs font-semibold uppercase tracking-[0.4em] text-sky-600">
+                    Step {String(s.n).padStart(2, "0")}
+                  </span>
+                  <h3 className="mt-3 text-xl font-semibold text-slate-900">{s.title}</h3>
+                  <p className="mt-4 text-base leading-relaxed text-slate-600">{s.body}</p>
                 </div>
               </div>
-
-              <span className="text-xs font-semibold uppercase tracking-[0.4em] text-sky-600">
-                Step {String(s.n).padStart(2, "0")}
-              </span>
-              <h3 className="mt-3 text-xl font-semibold text-slate-900">{s.title}</h3>
-              <p className="mt-4 text-base leading-relaxed text-slate-600">{s.body}</p>
             </article>
           ))}
         </div>
