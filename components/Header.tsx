@@ -62,14 +62,14 @@ export function Header() {
       <div className="mx-auto flex w-full max-w-screen-xl items-center justify-between px-4 py-4">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+          className="inline-flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
         >
           <Image
             src="/traferr-logo.svg"
             alt="Traferr logo"
-            width={32}
-            height={32}
-            className="h-8 w-8 drop-shadow"
+            width={44}
+            height={44}
+            className="h-11 w-11 drop-shadow-[0_12px_24px_rgba(56,189,248,0.35)]"
             priority
           />
           <span className="text-xl font-black tracking-tight text-transparent bg-gradient-to-r from-sky-600 via-blue-500 to-indigo-500 bg-clip-text drop-shadow-sm sm:text-2xl md:text-3xl">

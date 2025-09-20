@@ -36,14 +36,14 @@ export function SiteShell({ children }: SiteShellProps) {
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-lg font-semibold tracking-tight text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+            className="inline-flex items-center gap-3 text-lg font-semibold tracking-tight text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
           >
             <Image
               src="/traferr-logo.svg"
               alt="Traferr logo"
-              width={28}
-              height={28}
-              className="h-7 w-7 drop-shadow-sm"
+              width={36}
+              height={36}
+              className="h-9 w-9 drop-shadow-[0_10px_22px_rgba(56,189,248,0.3)]"
             />
             <span>Traferr</span>
           </Link>
