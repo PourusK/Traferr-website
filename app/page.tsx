@@ -25,18 +25,30 @@ export default function Home() {
           style={{ paddingBottom: "var(--section-padding-block)" }}
         >
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center">
-            <div className="inline-flex items-center gap-4 rounded-full border border-sky-200 bg-white/80 px-6 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-sky-600 shadow-sm">
-              <Image
-                src="/traferr-logo.svg"
-                alt="Traferr logo"
-                width={96}
-                height={96}
-                priority
-                style={{ width: 96, height: "auto" }}
-              />
-              <span className="bg-gradient-to-r from-orange-500 via-amber-400 to-pink-500 bg-clip-text text-transparent">
-                Traferr
-              </span>
+            <div className="relative inline-flex items-center justify-center">
+              <div className="inline-flex items-center rounded-full border border-white/80 bg-gradient-to-r from-white/95 via-white/90 to-sky-50/80 px-10 py-3 pl-16 text-[0.7rem] font-semibold uppercase tracking-[0.38em] text-sky-600 shadow-lg shadow-sky-200/60 backdrop-blur">
+                <span className="sr-only">Traferr logo</span>
+                <span className="bg-gradient-to-r from-orange-500 via-amber-400 to-pink-500 bg-clip-text text-transparent">
+                  Traferr
+                </span>
+              </div>
+              <div className="pointer-events-none absolute left-0 top-1/2 -translate-y-1/2 -translate-x-10 sm:-translate-x-12">
+                <div className="relative h-20 w-20 sm:h-24 sm:w-24">
+                  <div
+                    className="absolute inset-x-4 bottom-1 rounded-full bg-orange-400/50 blur-2xl"
+                    aria-hidden="true"
+                  />
+                  <Image
+                    src="/traferr-logo.svg"
+                    alt=""
+                    width={160}
+                    height={160}
+                    priority
+                    aria-hidden
+                    className="relative z-10 h-full w-full drop-shadow-[0_22px_40px_rgba(249,115,22,0.55)]"
+                  />
+                </div>
+              </div>
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
               Have you talked to someone new today?
