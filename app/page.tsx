@@ -81,18 +81,38 @@ export default function Home() {
 
       <section id="why-i-need-this" className="px-4">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-10 rounded-3xl border border-slate-200 bg-slate-50 px-6 py-16 shadow-xl shadow-sky-100/40">
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-start">
-            <div className="max-w-2xl space-y-4">
-              <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">
-                Why I need this
-              </p>
-              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-                Social feeds broadcast. Traferr has a back-and-forth.
-              </h2>
-              <p className="text-base leading-relaxed text-slate-600">
-                Skip the endless scroll and tap into someone who actually lives there. It’s faster,
-                calmer, and finally personal.
-              </p>
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-start">
+            <div className="flex flex-col gap-8">
+              <div className="max-w-2xl space-y-4">
+                <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">
+                  Why I need this
+                </p>
+                <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+                  Social feeds broadcast. Traferr has a back-and-forth.
+                </h2>
+                <p className="text-base leading-relaxed text-slate-600">
+                  Skip the endless scroll and tap into someone who actually lives there. It’s faster,
+                  calmer, and finally personal.
+                </p>
+              </div>
+              <div className="grid gap-6 sm:grid-cols-2">
+                <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+                  <h3 className="text-lg font-semibold text-slate-900">Endless social feeds</h3>
+                  <ul className="mt-4 space-y-2 text-sm leading-relaxed text-slate-600">
+                    <li>Everyone’s shouting, no one’s listening.</li>
+                    <li>Recommendations drowned in ads and outdated threads.</li>
+                    <li>You leave with more tabs, not clarity.</li>
+                  </ul>
+                </article>
+                <article className="rounded-3xl border border-sky-100 bg-white p-6 shadow-[0_20px_60px_-24px_rgba(56,189,248,0.5)]">
+                  <h3 className="text-lg font-semibold text-slate-900">Direct conversation</h3>
+                  <ul className="mt-4 space-y-2 text-sm leading-relaxed text-slate-600">
+                    <li>Talk to the person who walks those streets every day.</li>
+                    <li>Ask follow-ups instantly—no threads to refresh.</li>
+                    <li>Walk away with confidence in your next move.</li>
+                  </ul>
+                </article>
+              </div>
             </div>
             <div className="relative isolate overflow-hidden rounded-3xl border border-sky-100 bg-white p-3 shadow-[0_24px_80px_-40px_rgba(56,189,248,0.55)]">
               <div className="aspect-video w-full overflow-hidden rounded-2xl bg-gradient-to-br from-sky-100 via-white to-sky-50">
@@ -114,24 +134,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="grid gap-6 md:grid-cols-2">
-            <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-              <h3 className="text-lg font-semibold text-slate-900">Endless social feeds</h3>
-              <ul className="mt-4 space-y-2 text-sm leading-relaxed text-slate-600">
-                <li>Everyone’s shouting, no one’s listening.</li>
-                <li>Recommendations drowned in ads and outdated threads.</li>
-                <li>You leave with more tabs, not clarity.</li>
-              </ul>
-            </article>
-            <article className="rounded-3xl border border-sky-100 bg-white p-6 shadow-[0_20px_60px_-24px_rgba(56,189,248,0.5)]">
-              <h3 className="text-lg font-semibold text-slate-900">Direct conversation</h3>
-              <ul className="mt-4 space-y-2 text-sm leading-relaxed text-slate-600">
-                <li>Talk to the person who walks those streets every day.</li>
-                <li>Ask follow-ups instantly—no threads to refresh.</li>
-                <li>Walk away with confidence in your next move.</li>
-              </ul>
-            </article>
           </div>
         </div>
       </section>
