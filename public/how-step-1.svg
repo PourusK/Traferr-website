@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 780">
+  <defs>
+    <linearGradient id="gradient-step-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="card-1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.95)" />
+      <stop offset="100%" stop-color="rgba(241,245,249,0.9)" />
+    </linearGradient>
+  </defs>
+  <rect width="360" height="780" fill="url(#gradient-step-1)" />
+  <g opacity="0.15" fill="#f8fafc">
+    <circle cx="70" cy="110" r="42" />
+    <circle cx="310" cy="180" r="32" />
+    <circle cx="120" cy="620" r="28" />
+  </g>
+  <g transform="translate(28 120)">
+    <rect width="304" height="132" rx="28" fill="url(#card-1)" />
+    <rect x="24" y="24" width="168" height="20" rx="10" fill="#0ea5e9" opacity="0.9" />
+    <rect x="24" y="60" width="216" height="14" rx="7" fill="#1e293b" opacity="0.75" />
+    <rect x="24" y="92" width="152" height="14" rx="7" fill="#334155" opacity="0.55" />
+    <circle cx="256" cy="86" r="26" fill="#38bdf8" opacity="0.75" />
+    <circle cx="256" cy="86" r="12" fill="#0f172a" opacity="0.7" />
+  </g>
+  <g transform="translate(28 296)">
+    <rect width="304" height="312" rx="36" fill="rgba(15,23,42,0.45)" />
+    <rect x="32" y="40" width="112" height="112" rx="24" fill="#f8fafc" opacity="0.92" />
+    <rect x="168" y="40" width="104" height="16" rx="8" fill="#e2e8f0" />
+    <rect x="168" y="72" width="72" height="12" rx="6" fill="#cbd5f5" />
+    <rect x="168" y="104" width="88" height="12" rx="6" fill="#e2e8f0" />
+    <rect x="32" y="176" width="240" height="16" rx="8" fill="#38bdf8" opacity="0.9" />
+    <rect x="32" y="212" width="176" height="12" rx="6" fill="#e2e8f0" />
+    <rect x="32" y="244" width="136" height="12" rx="6" fill="#cbd5f5" />
+  </g>
+  <g transform="translate(44 656)" opacity="0.9">
+    <rect width="272" height="56" rx="20" fill="rgba(15,23,42,0.35)" />
+    <rect x="24" y="18" width="136" height="12" rx="6" fill="#f8fafc" opacity="0.9" />
+    <rect x="24" y="36" width="88" height="8" rx="4" fill="#bae6fd" opacity="0.85" />
+    <circle cx="226" cy="28" r="14" fill="#38bdf8" />
+    <circle cx="258" cy="28" r="14" fill="#0ea5e9" />
+  </g>
+</svg>

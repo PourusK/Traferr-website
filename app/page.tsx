@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const summaryCards = [
@@ -15,6 +16,30 @@ const summaryCards = [
     title: "Wallet summary",
     metric: "Transparent payouts",
     description: "Track balances, requests, and tips from a single dashboard.",
+  },
+];
+
+const howItWorksSteps = [
+  {
+    title: "Discover local experts",
+    description:
+      "Browse a curated map of locals, filter by specialty, and invite the right hosts into every itinerary.",
+    image: "/how-step-1.svg",
+    imageAlt: "Organizer browsing Traferr locals on the mobile app.",
+  },
+  {
+    title: "Confirm availability",
+    description:
+      "Check live calendars, review rates, and lock in the people who can welcome your travelers on the right dates.",
+    image: "/how-step-2.svg",
+    imageAlt: "Availability details for a Traferr local inside the app.",
+  },
+  {
+    title: "Coordinate on the go",
+    description:
+      "Message, share updates, and keep every traveler synced with transparent tasks and payment status in one place.",
+    image: "/how-step-3.svg",
+    imageAlt: "In-app messaging thread between a traveler and a local host.",
   },
 ];
 
@@ -94,6 +119,43 @@ export default function Home() {
                 <p className="mt-3 text-lg font-semibold text-slate-900">{card.metric}</p>
                 <p className="mt-2 text-sm text-slate-600">{card.description}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white/90 px-4">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 py-16">
+          <div className="space-y-4 text-center">
+            <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">How it works</p>
+            <h2 className="text-3xl font-semibold text-slate-900">Guide every journey in three steps</h2>
+            <p className="mx-auto max-w-2xl text-base text-slate-600">
+              Give your travelers clarity before they depart. Traferr keeps discovery, coordination, and follow-up aligned so
+              every local partnership feels effortless.
+            </p>
+          </div>
+          <div className="grid gap-8 md:grid-cols-3">
+            {howItWorksSteps.map((step) => (
+              <article
+                key={step.title}
+                className="flex h-full flex-col items-center gap-6 rounded-3xl border border-slate-200 bg-white/80 p-6 text-center shadow-lg shadow-slate-200/60"
+              >
+                <div className="relative w-full max-w-[220px]">
+                  <div className="relative aspect-[9/19.5] w-full">
+                    <div className="absolute inset-0 rounded-[2.75rem] border border-slate-900/15 bg-slate-900 shadow-[0_22px_50px_rgba(15,23,42,0.28)]">
+                      <div className="absolute inset-[12px] overflow-hidden rounded-[2rem] bg-slate-900">
+                        <Image src={step.image} alt={step.imageAlt} fill className="object-cover" sizes="(max-width: 768px) 200px, 220px" />
+                      </div>
+                      <div className="absolute left-1/2 top-3 h-1.5 w-16 -translate-x-1/2 rounded-full bg-slate-700" aria-hidden />
+                      <div className="absolute left-1/2 bottom-3 h-1 w-20 -translate-x-1/2 rounded-full bg-slate-700/60" aria-hidden />
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-lg font-semibold text-slate-900">{step.title}</h3>
+                  <p className="text-sm text-slate-600">{step.description}</p>
+                </div>
+              </article>
             ))}
           </div>
         </div>
