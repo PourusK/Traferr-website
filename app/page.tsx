@@ -1,6 +1,5 @@
 import HowItWorks from "@/components/HowItWorks";
 import Link from "next/link";
-
 import { SectionLink } from "@/components/SectionLink";
 
 const badges = [
@@ -28,9 +27,15 @@ export default function Home() {
               Have you talked to someone new today?
             </h1>
             <p className="max-w-2xl text-lg leading-relaxed text-slate-600 sm:text-xl">
-              <span className="block">We’re more “connected” than ever, but it’s still hard to simply ask:</span>
-              <span className="block">Where’s the best shawarma in Karama? What’s the easiest way to commute in Wakayama?</span>
-              <span className="block">Traferr connects you directly to locals—no noise, just real answers.</span>
+              <span className="block">
+                We’re more “connected” than ever, but it’s still hard to simply ask:
+              </span>
+              <span className="block">
+                Where’s the best shawarma in Karama? What’s the easiest way to commute in Wakayama?
+              </span>
+              <span className="block">
+                Traferr connects you directly to locals—no noise, just real answers.
+              </span>
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
@@ -77,12 +82,15 @@ export default function Home() {
       <section id="why-i-need-this" className="px-4">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-10 rounded-3xl border border-slate-200 bg-slate-50 px-6 py-16 shadow-xl shadow-sky-100/40">
           <div className="max-w-2xl space-y-4">
-            <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">Why I need this</p>
+            <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">
+              Why I need this
+            </p>
             <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
               Social feeds broadcast. Traferr has a back-and-forth.
             </h2>
             <p className="text-base leading-relaxed text-slate-600">
-              Skip the endless scroll and tap into someone who actually lives there. It’s faster, calmer, and finally personal.
+              Skip the endless scroll and tap into someone who actually lives there. It’s faster,
+              calmer, and finally personal.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2">

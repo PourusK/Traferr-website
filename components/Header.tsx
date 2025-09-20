@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
 import { SectionLink } from "./SectionLink";
 
 type SectionNavItem = {
@@ -23,7 +22,9 @@ const navigation: Array<SectionNavItem | LinkNavItem> = [
   { label: "FAQ", href: "/faq" },
 ];
 
-function isSectionNavItem(item: SectionNavItem | LinkNavItem): item is SectionNavItem {
+function isSectionNavItem(
+  item: SectionNavItem | LinkNavItem
+): item is SectionNavItem {
   return Object.prototype.hasOwnProperty.call(item, "targetId");
 }
 
@@ -32,25 +33,16 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 24);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 24);
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        setIsMenuOpen(false);
-      }
+      if (window.innerWidth >= 768) setIsMenuOpen(false);
     };
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -73,6 +65,7 @@ export function Header() {
         >
           Traferr
         </Link>
+
         <nav className="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex">
           {navigation.map((item) =>
             isSectionNavItem(item) ? (
@@ -94,9 +87,10 @@ export function Header() {
             )
           )}
         </nav>
+
         <button
           type="button"
-          onClick={() => setIsMenuOpen((value) => !value)}
+          onClick={() => setIsMenuOpen((v) => !v)}
           className="inline-flex items-center justify-center rounded-full p-2 text-slate-700 transition hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 md:hidden"
           aria-label="Toggle navigation"
           aria-expanded={isMenuOpen}
@@ -114,6 +108,7 @@ export function Header() {
           </svg>
         </button>
       </div>
+
       {isMenuOpen ? (
         <div className="border-t border-slate-200 bg-white/90 px-4 py-3 shadow-lg backdrop-blur md:hidden">
           <div className="flex flex-col gap-2 text-sm font-medium text-slate-700">
