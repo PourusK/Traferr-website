@@ -27,8 +27,6 @@ export default function Home() {
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center">
             <div className="hero-badge">
               <div className="hero-pin" aria-hidden="true">
-                <div className="hero-pin__tile"></div>
-                <div className="hero-pin__glow"></div>
                 <div className="hero-pin__spinner">
                   <div className="traferr-logo-rotate">
                     <Image
