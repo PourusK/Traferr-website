@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" role="img" aria-labelledby="title">
   <title id="title">Traferr logo</title>
   <image
-    href="traferr-logo.png"
-    xlink:href="traferr-logo.png"
+    href="/traferr-logo.png"
+    xlink:href="/traferr-logo.png"
     width="512"
     height="512"
     preserveAspectRatio="xMidYMid meet"
