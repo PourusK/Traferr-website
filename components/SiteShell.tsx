@@ -39,7 +39,7 @@ export function SiteShell({ children }: SiteShellProps) {
             className="inline-flex items-center gap-3 text-lg font-semibold tracking-tight text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
           >
             <Image
-              src="/traferr-logo.png"
+              src="/traferr-logo.svg"
               alt="Traferr logo"
               width={96}
               height={120}
