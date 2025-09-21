@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 
-const sections = [
+type Section = { heading: string; content: string[] };
+
+const sections: Section[] = [
   {
     heading: "1. Scope & Acceptance",
     content: [
@@ -25,7 +27,7 @@ const sections = [
   {
     heading: "4. How to Request a Review",
     content: [
-      "Email: support@traferr.com with the subject “Refund Request”.",
+      "Email: support@traferr.com with the subject 'Refund Request'.",
       "Include: full name, registered phone/email, order ID, purchase date/time, amount, description of the issue, and any evidence (screenshots, receipts, chat logs).",
       "Timing: Please contact us within 7 days of the transaction to be eligible for a review.",
     ],
@@ -58,8 +60,8 @@ const sections = [
   {
     heading: "8. Processing Approved Refunds",
     content: [
-      "If a refund is approved, we will initiate it within 5–7 working days of approval.",
-      "Funds typically appear in the original payment method within 5–7 working days thereafter, subject to your bank/payment provider.",
+      "If a refund is approved, we will initiate it within 5-7 working days of approval.",
+      "Funds typically appear in the original payment method within 5-7 working days thereafter, subject to your bank/payment provider.",
       "We may refund in the original currency; exchange rates and third-party fees are outside our control.",
     ],
   },
@@ -116,6 +118,7 @@ export default function RefundPolicyPage() {
             Purchases on Traferr are final. In limited cases, you can contact us for a discretionary review.
           </p>
         </header>
+
         <div className="space-y-8">
           {sections.map((section) => (
             <section key={section.heading} className="space-y-3">
