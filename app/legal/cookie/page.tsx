@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 
-type Section = { heading: string; content: (string | JSX.Element)[] };
+type Section = { heading: string; content: (string | ReactNode)[] };
 
 const sections: Section[] = [
   {
