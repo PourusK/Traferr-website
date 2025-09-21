@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback } from "react";
+import { useRouter } from "next/navigation";
 
 type SectionLinkProps = {
   targetId: string;
@@ -17,6 +18,8 @@ export function SectionLink({
   type = "button",
   ...rest
 }: SectionLinkProps) {
+  const router = useRouter();
+
   const handleClick = useCallback(
     (event: React.MouseEvent<HTMLButtonElement>) => {
       event.preventDefault();
@@ -32,14 +35,26 @@ export function SectionLink({
           block: "start",
         });
 
-        window.history.replaceState(null, "", `#${targetId}`);
+        const anchor = `#${targetId}`;
+        if (window.location.hash !== anchor) {
+          window.history.replaceState(null, "", anchor);
+        }
+
+        if (onNavigate) {
+          onNavigate();
+        }
+
+        return;
       }
+
+      const anchorPath = `/#${targetId}`;
+      router.push(anchorPath);
 
       if (onNavigate) {
         onNavigate();
       }
     },
-    [onNavigate, targetId]
+    [onNavigate, router, targetId]
   );
 
   return (
