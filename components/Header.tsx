@@ -65,14 +65,14 @@ export function Header() {
           className="inline-flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
         >
           <Image
-            src="/traferr-logo.png"
+            src="/traferr-logo.svg"
             alt="Traferr logo"
             width={96}
             height={120}
             priority
             className="h-12 w-auto sm:h-14"
           />
-          <span className="text-xl font-black tracking-tight text-transparent bg-gradient-to-r from-sky-600 via-blue-500 to-indigo-500 bg-clip-text drop-shadow-sm sm:text-2xl md:text-3xl">
+          <span className="traferr-brand-text text-xl font-black tracking-[0.35em] drop-shadow-sm sm:text-2xl md:text-3xl">
             Traferr
           </span>
         </Link>

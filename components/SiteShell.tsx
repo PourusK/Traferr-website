@@ -36,16 +36,18 @@ export function SiteShell({ children }: SiteShellProps) {
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4">
           <Link
             href="/"
-            className="inline-flex items-center gap-3 text-lg font-semibold tracking-tight text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+            className="inline-flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
           >
             <Image
-              src="/traferr-logo.png"
+              src="/traferr-logo.svg"
               alt="Traferr logo"
               width={96}
               height={120}
               className="h-12 w-auto sm:h-14"
             />
-            <span>Traferr</span>
+            <span className="traferr-brand-text text-lg font-black tracking-[0.35em] drop-shadow-sm">
+              Traferr
+            </span>
           </Link>
           <nav className="hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex">
             {navigationLinks.map((link) => (
