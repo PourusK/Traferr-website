@@ -120,31 +120,32 @@ export default function Home() {
             <div className="flex flex-col gap-8">
               <div className="max-w-2xl space-y-4">
                 <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">
-                  Why I need this
+                  WHY THIS, NOT FEEDS
                 </p>
                 <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-                  Social feeds broadcast. Traferr has a back-and-forth.
+                  Feeds shout. Localites answer.
                 </h2>
                 <p className="text-base leading-relaxed text-slate-600">
-                  Skip the endless scroll and tap into someone who actually lives there. It’s faster,
-                  calmer, and finally personal.
+                  Skip the doom-scroll. Talk to someone who actually lives there—faster, calmer,
+                  human.
                 </p>
               </div>
               <div className="grid gap-6 sm:grid-cols-2">
                 <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-                  <h3 className="text-lg font-semibold text-slate-900">Endless social feeds</h3>
+                  <h3 className="text-lg font-semibold text-slate-900">Broadcast feeds</h3>
                   <ul className="mt-4 space-y-2 text-sm leading-relaxed text-slate-600">
-                    <li>Everyone’s shouting, no one’s listening.</li>
-                    <li>Recommendations drowned in ads and outdated threads.</li>
+                    <li>Everyone’s posting; no one’s accountable.</li>
+                    <li>Advice buried under ads and old threads.</li>
                     <li>You leave with more tabs, not clarity.</li>
                   </ul>
                 </article>
                 <article className="rounded-3xl border border-sky-100 bg-white p-6 shadow-[0_20px_60px_-24px_rgba(56,189,248,0.5)]">
-                  <h3 className="text-lg font-semibold text-slate-900">Direct conversation</h3>
+                  <h3 className="text-lg font-semibold text-slate-900">One-on-one with a Localite</h3>
                   <ul className="mt-4 space-y-2 text-sm leading-relaxed text-slate-600">
-                    <li>Talk to the person who walks those streets every day.</li>
+                    <li>Chat with the person who walks those streets daily.</li>
                     <li>Ask follow-ups instantly—no threads to refresh.</li>
-                    <li>Walk away with confidence in your next move.</li>
+                    <li>Verified humans. Current, lived context.</li>
+                    <li>Walk away knowing exactly what to do next.</li>
                   </ul>
                 </article>
               </div>

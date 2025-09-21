@@ -5,21 +5,21 @@ import IPhoneFrame from "@/components/IPhoneFrame";
 const steps = [
   {
     n: 1,
-    title: "Select a local",
+    title: "Choose your Localite or become one",
     body:
-      "Tell us where you are (or where you’re heading) and pick someone who knows the neighborhood inside-out.",
+      "Set your city (or where you’re headed) and pick the person who fits you best — or flip the switch and list yourself as a Localite.",
   },
   {
     n: 2,
-    title: "Ask",
+    title: "Get verified (everyone, always)",
     body:
-      "Drop your question—food, commutes, cultural cues. No algorithmic walls—just people.",
+      "Quick checks give you a Verified badge. It keeps bots out and conversations safe — for visitors and for locals.",
   },
   {
     n: 3,
-    title: "Get real answers",
+    title: "Connect & chat",
     body:
-      "Receive a direct, human response that maps to your day, not a generic listicle from years ago.",
+      "Start a private, one-on-one conversation. Ask about routes, food, culture — or just swap life stories. No algorithms, just people.",
   },
 ];
 
@@ -38,14 +38,14 @@ export default function HowItWorks() {
             How it works
           </p>
           <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">
-            Three steps to a real conversation
+            How Traferr works
           </h2>
           <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
-            Traferr removes the friction between your curiosity and the person who can answer it best.
+            Real people. Real talk. Three simple steps.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-10 sm:auto-rows-fr sm:grid-cols-2 lg:grid-cols-3">
           {steps.map((s) => (
             <article
               key={s.n}
@@ -58,9 +58,9 @@ export default function HowItWorks() {
                   className="mx-0 shrink-0 drop-shadow-[0_18px_40px_rgba(15,23,42,0.25)]"
                 />
 
-                <div className="text-left">
+                <div className="flex flex-1 flex-col text-left">
                   <span className="block text-xs font-semibold uppercase tracking-[0.4em] text-sky-600">
-                    Step {String(s.n).padStart(2, "0")}
+                    STEP {String(s.n).padStart(2, "0")}
                   </span>
                   <h3 className="mt-3 text-xl font-semibold text-slate-900">{s.title}</h3>
                   <p className="mt-4 text-base leading-relaxed text-slate-600">{s.body}</p>
