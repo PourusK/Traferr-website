@@ -25,16 +25,29 @@ export default function Home() {
           style={{ paddingBottom: "var(--section-padding-block)" }}
         >
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center">
-            <div className="relative inline-flex items-center rounded-full border border-white/70 bg-white/80 pl-16 pr-7 py-2.5 shadow-xl shadow-sky-200/60 backdrop-blur sm:pl-20 sm:pr-10">
-              <div className="absolute -left-7 flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-[0_28px_55px_-25px_rgba(249,115,22,0.75)] [perspective:800px] sm:-left-9 sm:h-20 sm:w-20">
-                <Image
-                  src="/traferr-logo.svg"
-                  alt="Traferr logo"
-                  width={120}
-                  height={120}
-                  priority
-                  className="h-12 w-auto traferr-logo-rotate sm:h-16"
-                />
+            <div className="relative inline-flex items-center rounded-full border border-white/60 bg-white/80 pl-24 pr-8 py-3 shadow-xl shadow-sky-200/60 backdrop-blur sm:pl-32 sm:pr-14">
+              <div className="pointer-events-none absolute -left-12 flex h-24 w-24 items-center justify-center overflow-visible rounded-full bg-gradient-to-br from-white via-white to-orange-100 shadow-[0_42px_80px_-34px_rgba(14,116,144,0.6)] ring-1 ring-white/70 [perspective:1600px] sm:-left-16 sm:h-28 sm:w-28">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/90 via-white/65 to-orange-100/70 blur-sm"></div>
+                <div className="relative h-full w-full">
+                  <div className="traferr-logo-rotate">
+                    <Image
+                      src="/traferr-logo.svg"
+                      alt="Traferr logo"
+                      fill
+                      priority
+                      sizes="(min-width: 640px) 7rem, 6rem"
+                      className="traferr-logo-face"
+                    />
+                    <Image
+                      src="/traferr-logo.svg"
+                      alt=""
+                      fill
+                      sizes="(min-width: 640px) 7rem, 6rem"
+                      aria-hidden="true"
+                      className="traferr-logo-face traferr-logo-face--back"
+                    />
+                  </div>
+                </div>
               </div>
               <span className="traferr-brand-text text-xl font-black tracking-[0.35em] sm:text-2xl">
                 Traferr

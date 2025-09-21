@@ -55,8 +55,26 @@ html {
 }
 
 .traferr-logo-rotate {
-  animation: traferr-rotate-y 8s linear infinite;
-  backface-visibility: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  animation: traferr-rotate-y 7s cubic-bezier(0.56, 0.04, 0.34, 0.98) infinite;
   transform-style: preserve-3d;
   will-change: transform;
+}
+
+.traferr-logo-face {
+  position: absolute;
+  inset: 0;
+  display: block;
+  object-fit: contain;
+  backface-visibility: hidden;
+  transform: translateZ(16px) scale(1.24);
+  filter:
+    drop-shadow(0 22px 28px rgba(14, 165, 233, 0.2))
+    drop-shadow(0 12px 24px rgba(249, 115, 22, 0.28));
+}
+
+.traferr-logo-face--back {
+  transform: rotateY(180deg) translateZ(16px) scale(1.24);
 }
