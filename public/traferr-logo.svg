@@ -1,21 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img">
-  <defs>
-    <linearGradient id="traferrGradient" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0%" stop-color="#ffb347" />
-      <stop offset="100%" stop-color="#ff6b00" />
-    </linearGradient>
-    <linearGradient id="traferrHighlight" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0%" stop-color="#ffe7b3" stop-opacity="0.85" />
-      <stop offset="100%" stop-color="#ff8a3d" stop-opacity="0.35" />
-    </linearGradient>
-  </defs>
-  <path
-    d="M128 112a128 128 0 0 1 256 0v40c0 22.09-17.91 40-40 40h-32c-22.09 0-40-17.91-40-40v-16h-32v16c0 22.09-17.91 40-40 40h-32c-22.09 0-40-17.91-40-40v-40Z"
-    fill="url(#traferrGradient)"
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Traferr logo</title>
+  <image
+    href="/traferr-logo.png"
+    xlink:href="/traferr-logo.png"
+    width="512"
+    height="512"
+    preserveAspectRatio="xMidYMid meet"
   />
-  <path
-    d="M256 160c-79.53 0-144 64.47-144 144 0 113.7 144 248 144 248s144-134.3 144-248c0-79.53-64.47-144-144-144Zm0 224a80 80 0 1 1 0-160 80 80 0 0 1 0 160Z"
-    fill="url(#traferrGradient)"
-  />
-  <circle cx="256" cy="304" r="72" fill="url(#traferrHighlight)" />
 </svg>
