@@ -1,89 +1,103 @@
-// app/legal/cookie/page.tsx
+// app/legal/disclaimer/page.tsx
 import type { Metadata } from "next";
 
 type Section = { heading: string; content: string[] };
 
-/** Real store URLs */
-const GOOGLE_PLAY_URL =
-  "https://play.google.com/store/apps/details?id=com.traferr&pli=1";
-const APP_STORE_URL =
-  "https://apps.apple.com/us/app/traferr-the-world-is-yours/id6744027186";
-const INDUS_STORE_URL = ""; // add when live, or leave empty
-
 const sections: Section[] = [
   {
-    heading: "0. Company & App Store Availability",
+    heading: "1. Informational purposes only",
     content: [
-      `The terms “Company,” “we,” or “us” refer to the owner of the application, Traferr.`,
-      `Traferr is available on Google Play (${GOOGLE_PLAY_URL}), Apple App Store (${APP_STORE_URL})${
-        INDUS_STORE_URL ? `, and Indus App Store (${INDUS_STORE_URL})` : ""
-      }.`,
-      "References to download locations are for convenience only and do not change how this policy applies to your use of Traferr.",
+      "Content on Traferr—such as guides, recommendations, sample itineraries, pricing estimates, and availability signals—is provided for general information and planning convenience.",
+      "Always verify visa requirements, entry rules, permits, health advisories, insurance needs, local regulations, and safety conditions with the relevant authorities or trusted sources before booking or travel.",
+      "Nothing on Traferr constitutes legal, medical, tax, or professional travel advice. You should obtain advice from qualified professionals where appropriate.",
     ],
   },
   {
-    heading: "1. Cookies & Similar Technologies",
+    heading: "2. Local partner independence",
     content: [
-      "We use cookies and similar technologies (e.g., local storage, SDKs, pixels, web beacons) to remember your preferences, understand usage patterns, improve performance, keep your session secure, and personalize content.",
-      "Your choices: most browsers and devices let you block or delete cookies and local storage. If you accept cookies, you consent to our use of information collected via those cookies. If you reject certain cookies, some features may not work properly.",
-      "Where required by law (e.g., in the EEA/UK), we will ask for your consent for non-essential cookies and provide a way to withdraw it at any time via a cookie banner or settings.",
+      "Local partners (“Localites”) are independent providers, not employees, agents, or representatives of Traferr. Listings, profiles, and statements are created or controlled by the Localites themselves unless otherwise indicated.",
+      "Traferr does not supervise, direct, or control Localites’ work; availability, punctuality, quality, safety practices, and compliance remain the sole responsibility of the Localite.",
+      "Background, license, and permit statuses—where shown—may rely on information provided by the Localite or third parties and can change over time. You should perform your own due diligence.",
     ],
   },
   {
-    heading: "2. Third-Party Sites, SDKs & Advertising",
+    heading: "3. Organizer and traveler responsibility",
     content: [
-      "Traferr may link to third-party websites or integrate third-party SDKs and services (e.g., analytics, crash reporting, payments, customer support, advertising). These providers may collect information such as your IP address, device identifiers, app interactions, approximate location, and in some cases set or read their own cookies or storage.",
-      "These third parties process data under their own privacy policies and terms; we do not control their technologies. We select vendors with appropriate safeguards and limit sharing to what’s necessary to operate Traferr, measure performance, prevent fraud, and (where applicable) personalize content/ads.",
-      "You can learn more or opt out where offered by the provider (for example, in-app settings, device settings like “Limit Ad Tracking,” or platform-level ad preferences). If you have concerns about a particular integration, contact us and we’ll help identify the relevant provider.",
+      "Organizers and travelers are responsible for the selection of activities and Localites, the suitability of itineraries for participants, and ensuring adequate insurance coverage (e.g., medical, evacuation, liability, equipment).",
+      "You are responsible for the conduct of your group, adherence to local laws and customs, and compliance with safety guidance from Localites, authorities, and landowners.",
+      "You acknowledge that travel involves inherent risks (e.g., transport delays, weather, terrain, wildlife, illness, political disruptions). You agree to assess and accept these risks before participation.",
     ],
   },
   {
-    heading: "3. Global Privacy Rights (GDPR/EEA/UK, CCPA/CPRA, India DPDP, etc.)",
+    heading: "4. Platform role & third-party services",
     content: [
-      "Depending on your location, you may have rights to access, correct, delete, port, or restrict/opt-out of certain processing of your personal data, and to withdraw consent where processing is based on consent.",
-      "Legal bases (GDPR/UK GDPR): we process data where necessary for (i) performance of a contract (providing Traferr), (ii) our legitimate interests (e.g., security, analytics, product improvement, preventing fraud), (iii) compliance with legal obligations, and (iv) your consent (e.g., certain cookies/marketing).",
-      "Marketing/Profiling: where required, we seek consent before using non-essential cookies or sending direct marketing. You can unsubscribe from emails or adjust in-app notifications at any time.",
-      "Data transfers: when transferring personal data internationally, we use appropriate safeguards (e.g., Standard Contractual Clauses and equivalent measures) and assess local laws to protect your data.",
-      "CCPA/CPRA (California): we do not ‘sell’ personal information for monetary value. Some uses may be considered ‘sharing’ for cross-context behavioral advertising—you can opt out where applicable. We honor verifiable consumer requests as required by law.",
-      "India DPDP: we process personal data in accordance with the Digital Personal Data Protection Act, 2023, including lawful purposes, consent where required, and reasonable security practices.",
-      "How to exercise your rights: email privacy@traferr.com with your request, and we’ll respond consistent with applicable law. We may need to verify your identity and location before fulfilling a request.",
+      "Traferr operates a platform that facilitates discovery and communication between organizers/travelers and Localites. Except where explicitly stated, Traferr is not a party to the arrangements you enter into with Localites or other third parties.",
+      "The platform may reference or link to third-party websites, apps, payment providers, mapping tools, messaging tools, or transportation operators. Traferr does not control and is not responsible for third-party content, terms, privacy practices, availability, or performance.",
+      "Use of any third-party service is at your own discretion and subject to that provider’s terms and privacy policy.",
     ],
   },
   {
-    heading: "4. Contact",
+    heading: "5. Accuracy, availability, and changes",
     content: [
-      "Questions about cookies or privacy on Traferr? Contact privacy@traferr.com.",
-      "If we appoint a Data Protection Officer or an EU/UK representative, we will publish their contact details here.",
-      "For complaints, you may also contact your local data protection authority. We encourage you to reach out to us first so we can try to resolve your concern.",
+      "Traferr aims to keep content current, but availability, prices, regulations, and conditions can change without notice. We make no guarantee that platform information is complete, accurate, or up to date.",
+      "The platform (and any feature) may be modified, suspended, or discontinued at any time. Temporary outages, maintenance windows, or errors may occur.",
+    ],
+  },
+  {
+    heading: "6. Health, safety, and emergency preparedness",
+    content: [
+      "You must evaluate your fitness and health for any activity and consult a healthcare professional if needed. Disclose relevant medical conditions to your organizer/Localite where appropriate.",
+      "Carry required gear, medications, and documents, and maintain contingency plans (e.g., local emergency numbers, meeting points, backups for connectivity and payments).",
+    ],
+  },
+  {
+    heading: "7. Limitation of liability",
+    content: [
+      "To the maximum extent permitted by applicable law, Traferr is not liable for losses or damages arising from reliance on platform content; acts or omissions of Localites, travelers, organizers, or third parties; force majeure events; or risks inherent to travel and outdoor activities.",
+      "Where liability cannot be excluded by law, it will be limited to the extent permitted, which may include limiting remedies to re-supply of services or the cost of re-supply.",
+    ],
+  },
+  {
+    heading: "8. Jurisdiction & conflicts",
+    content: [
+      "This Disclaimer should be read together with Traferr’s Terms of Use, Privacy Policy, and Refunds & Cancellations Policy. If there is any conflict, the Terms of Use prevail to the extent of the conflict.",
+      "Use of Traferr and any dispute arising from it are subject to the governing law and venue stated in the Terms of Use.",
+    ],
+  },
+  {
+    heading: "9. Contact",
+    content: [
+      "Questions about this Disclaimer or platform content? Contact support@traferr.com. For emergencies, contact local emergency services first.",
     ],
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Cookies & Privacy — Traferr",
+  title: "Disclaimer — Traferr",
   description:
-    "How Traferr uses cookies and similar technologies, third-party integrations, and how to exercise your global privacy rights.",
+    "Important information about Traferr’s limited role, independent Localites, inherent travel risks, and your responsibilities when planning and participating in activities.",
 };
 
-export default function CookiePolicyPage() {
+export default function DisclaimerPage() {
   return (
     <div className="px-4 py-20">
       <div className="mx-auto w-full max-w-3xl space-y-10 rounded-3xl border border-slate-200 bg-white/95 p-10 shadow-xl shadow-slate-200/60">
         <header className="space-y-3">
-          <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">Privacy</p>
-          <h1 className="text-3xl font-semibold text-slate-900">Cookies & Privacy</h1>
+          <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">Disclaimer</p>
+          <h1 className="text-3xl font-semibold text-slate-900">Traferr Disclaimer</h1>
           <p className="text-sm text-slate-500">Effective January 1, 2025</p>
           <p className="text-base text-slate-600">
-            This page explains how Traferr uses cookies and similar technologies and your choices about them.
+            Traferr connects organizers and travelers with independent local partners. This Disclaimer clarifies Traferr’s
+            limited role, the independence of Localites, and your responsibilities when using the platform.
           </p>
         </header>
 
         <div className="space-y-8">
           {sections.map((section) => (
-            <section key={`cookie-${section.heading}`} className="space-y-3">
+            <section key={`disclaimer-${section.heading}`} className="space-y-3">
               <h2 className="text-xl font-semibold text-slate-900">{section.heading}</h2>
               {section.content.map((paragraph, i) => (
-                <p key={`cookie-${section.heading}-${i}`} className="text-sm text-slate-600">
+                <p key={`disclaimer-${section.heading}-${i}`} className="text-sm text-slate-600">
                   {paragraph}
                 </p>
               ))}
