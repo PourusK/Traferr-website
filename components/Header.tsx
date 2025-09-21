@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { SectionLink } from "./SectionLink";
@@ -61,9 +62,19 @@ export function Header() {
       <div className="mx-auto flex w-full max-w-screen-xl items-center justify-between px-4 py-4">
         <Link
           href="/"
-          className="text-lg font-semibold tracking-tight text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-pink-500 bg-clip-text"
+          className="inline-flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
         >
-          Traferr
+          <Image
+            src="/traferr-logo.svg"
+            alt="Traferr logo"
+            width={96}
+            height={120}
+            priority
+            className="h-12 w-auto sm:h-14"
+          />
+          <span className="text-xl font-black tracking-tight text-transparent bg-gradient-to-r from-sky-600 via-blue-500 to-indigo-500 bg-clip-text drop-shadow-sm sm:text-2xl md:text-3xl">
+            Traferr
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex">
