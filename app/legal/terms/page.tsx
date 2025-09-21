@@ -39,8 +39,8 @@ const sections = [
 ];
 
 export const metadata: Metadata = {
-  title: "Terms of Service — Traferr",
-  description: "Understand the terms that guide how you use Traferr and engage with local partners.",
+  title: "Terms of Usage — Traferr",
+  description: "Understand the terms of usage that guide how you use Traferr and engage with local partners.",
 };
 
 export default function TermsPage() {
@@ -48,8 +48,8 @@ export default function TermsPage() {
     <div className="px-4 py-20">
       <div className="mx-auto w-full max-w-3xl space-y-10 rounded-3xl border border-slate-200 bg-white/95 p-10 shadow-xl shadow-slate-200/60">
         <header className="space-y-3">
-          <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">Terms</p>
-          <h1 className="text-3xl font-semibold text-slate-900">Traferr Terms of Service</h1>
+          <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">Terms of usage</p>
+          <h1 className="text-3xl font-semibold text-slate-900">Traferr Terms of Usage</h1>
           <p className="text-sm text-slate-500">Effective January 1, 2025</p>
           <p className="text-base text-slate-600">
             These Terms outline how you, your travelers, and your local partners may use Traferr. Please read them carefully before launching new experiences with us.
