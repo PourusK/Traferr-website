@@ -25,24 +25,25 @@ export default function Home() {
           style={{ paddingBottom: "var(--section-padding-block)" }}
         >
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center">
-            <div className="relative inline-flex items-center rounded-full border border-white/60 bg-white/80 pl-24 pr-8 py-3 shadow-xl shadow-sky-200/60 backdrop-blur sm:pl-32 sm:pr-14">
-              <div className="pointer-events-none absolute -left-12 flex h-24 w-24 items-center justify-center overflow-visible rounded-full bg-gradient-to-br from-white via-white to-orange-100 shadow-[0_42px_80px_-34px_rgba(14,116,144,0.6)] ring-1 ring-white/70 [perspective:1600px] sm:-left-16 sm:h-28 sm:w-28">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/90 via-white/65 to-orange-100/70 blur-sm"></div>
-                <div className="relative h-full w-full">
+            <div className="hero-badge">
+              <div className="hero-pin" aria-hidden="true">
+                <div className="hero-pin__tile"></div>
+                <div className="hero-pin__glow"></div>
+                <div className="hero-pin__spinner">
                   <div className="traferr-logo-rotate">
                     <Image
                       src="/traferr-logo.svg"
                       alt="Traferr logo"
                       fill
                       priority
-                      sizes="(min-width: 640px) 7rem, 6rem"
+                      sizes="(min-width: 640px) 7rem, 5.5rem"
                       className="traferr-logo-face"
                     />
                     <Image
                       src="/traferr-logo.svg"
                       alt=""
                       fill
-                      sizes="(min-width: 640px) 7rem, 6rem"
+                      sizes="(min-width: 640px) 7rem, 5.5rem"
                       aria-hidden="true"
                       className="traferr-logo-face traferr-logo-face--back"
                     />
