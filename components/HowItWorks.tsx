@@ -8,8 +8,6 @@ const steps = [
     title: "Choose your Localite or become one",
     body:
       "Set your city (or where you’re headed) and pick the person who fits you best — or flip the switch and list yourself as a Localite.",
-    helper: "Filters: Location • Gender • Interests • Language",
-    toggle: "Toggle: “I’m visiting” / “I’m a local”",
   },
   {
     n: 2,
@@ -22,7 +20,6 @@ const steps = [
     title: "Connect & chat",
     body:
       "Start a private, one-on-one conversation. Ask about routes, food, culture — or just swap life stories. No algorithms, just people.",
-    helper: "If you’re a Localite: help visitors, build reputation, and earn.",
   },
 ];
 
@@ -48,7 +45,7 @@ export default function HowItWorks() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-10 sm:auto-rows-fr sm:grid-cols-2 lg:grid-cols-3">
           {steps.map((s) => (
             <article
               key={s.n}
@@ -61,20 +58,12 @@ export default function HowItWorks() {
                   className="mx-0 shrink-0 drop-shadow-[0_18px_40px_rgba(15,23,42,0.25)]"
                 />
 
-                <div className="text-left">
+                <div className="flex flex-1 flex-col text-left">
                   <span className="block text-xs font-semibold uppercase tracking-[0.4em] text-sky-600">
                     STEP {String(s.n).padStart(2, "0")}
                   </span>
                   <h3 className="mt-3 text-xl font-semibold text-slate-900">{s.title}</h3>
                   <p className="mt-4 text-base leading-relaxed text-slate-600">{s.body}</p>
-                  {s.helper ? (
-                    <p className="mt-3 text-xs text-slate-500">{s.helper}</p>
-                  ) : null}
-                  {s.toggle ? (
-                    <p className="mt-2 text-[0.6875rem] uppercase tracking-[0.25em] text-slate-400">
-                      {s.toggle}
-                    </p>
-                  ) : null}
                 </div>
               </div>
             </article>
