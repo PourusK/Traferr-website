@@ -10,11 +10,11 @@ type SiteShellProps = {
 };
 
 const legalLinks = [
-  { href: "/legal/terms", label: "Terms" },
-  { href: "/legal/privacy", label: "Privacy" },
   { href: "/legal/cookie", label: "Cookie" },
-  { href: "/legal/refund", label: "Refund" },
   { href: "/legal/disclaimer", label: "Disclaimer" },
+  { href: "/legal/privacy", label: "Privacy Policy" },
+  { href: "/legal/refund", label: "Refund Policy" },
+  { href: "/legal/terms", label: "Terms of Usage" },
 ];
 
 export function SiteShell({ children }: SiteShellProps) {
