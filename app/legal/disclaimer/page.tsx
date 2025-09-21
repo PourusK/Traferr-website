@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 type Section = { heading: string; content: string[] };
 
-const sections: Section[] = [
+const DISCLAIMER_SECTIONS: ReadonlyArray<Section> = [
   {
     heading: "1. Informational purposes only",
     content: [
@@ -92,11 +92,11 @@ export default function DisclaimerPage() {
         </header>
 
         <div className="space-y-8">
-          {sections.map((section) => (
-            <section key={section.heading} className="space-y-3">
+          {DISCLAIMER_SECTIONS.map((section) => (
+            <section key={`disclaimer-${section.heading}`} className="space-y-3">
               <h2 className="text-xl font-semibold text-slate-900">{section.heading}</h2>
               {section.content.map((paragraph, i) => (
-                <p key={`${section.heading}-${i}`} className="text-sm text-slate-600">
+                <p key={`disclaimer-${section.heading}-${i}`} className="text-sm text-slate-600">
                   {paragraph}
                 </p>
               ))}
