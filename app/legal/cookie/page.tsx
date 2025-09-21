@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
 
-/** Optional: add real store URLs or leave empty strings to keep policy generic */
-const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.traferr"; // ← real link
-const APP_STORE_URL = "https://apps.apple.com/app/id0000000000"; // ← real link
-const INDUS_STORE_URL = "https://www.indusappstore.com/apps/traferr"; // ← real link
-
 type Section = { heading: string; content: (string | JSX.Element)[] };
 
 const sections: Section[] = [
