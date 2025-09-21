@@ -27,7 +27,7 @@ export default function Home() {
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center">
             <div className="inline-flex items-center gap-4 rounded-full border border-white/80 bg-white/90 px-8 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.38em] text-sky-600 shadow-lg shadow-sky-200/60 backdrop-blur">
               <Image
-                src="/traferr-logo.svg"
+                src="/traferr-logo.png"
                 alt="Traferr logo"
                 width={112}
                 height={136}
