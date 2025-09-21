@@ -35,19 +35,19 @@ const sections: Section[] = [
   {
     heading: "5. Evaluation Criteria (Illustrative, Not Exhaustive)",
     content: [
-      "Duplicate charges for the same order.",
-      "Clear technical errors causing a purchase you did not intend (verifiable app/store logs).",
-      "Fraudulent or unauthorized transactions (subject to verification with payment provider and platform policies).",
-      "Non-delivery of a paid service due to a confirmed issue on Traferr’s side (not caused by device, connectivity, or user actions).",
+      "• Duplicate charges for the same order.",
+      "• Clear technical errors causing a purchase you did not intend (verifiable app/store logs).",
+      "• Fraudulent or unauthorized transactions (subject to verification with payment provider and platform policies).",
+      "• Non-delivery of a paid service due to a confirmed issue on Traferr’s side (not caused by device, connectivity, or user actions).",
     ],
   },
   {
     heading: "6. Non-Refundable Situations (Examples)",
     content: [
-      "Change of mind or unused time/credits after purchase.",
-      "Issues caused by device incompatibility, poor connectivity, or user account breaches due to weak credentials.",
-      "Completed consultations/services with Localites, or services partially delivered where value has been received.",
-      "Promotions, discounts, vouchers, bonus credits, convenience fees, taxes, or currency conversion charges.",
+      "• Change of mind or unused time/credits after purchase.",
+      "• Issues caused by device incompatibility, poor connectivity, or user account breaches due to weak credentials.",
+      "• Completed consultations/services with Localites, or services partially delivered where value has been received.",
+      "• Promotions, discounts, vouchers, bonus credits, convenience fees, taxes, or currency conversion charges.",
     ],
   },
   {
@@ -124,7 +124,7 @@ export default function RefundPolicyPage() {
             <section key={section.heading} className="space-y-3">
               <h2 className="text-xl font-semibold text-slate-900">{section.heading}</h2>
               {section.content.map((paragraph, i) => (
-                <p key={i} className="text-sm text-slate-600">
+                <p key={`${section.heading}-${i}`} className="text-sm text-slate-600">
                   {paragraph}
                 </p>
               ))}
