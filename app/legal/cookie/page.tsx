@@ -1,20 +1,51 @@
 import type { Metadata } from "next";
 
-/** Optional: add real store URLs or leave as empty strings to keep policy generic */
-const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.traferr"; // ← put real link
-const APP_STORE_URL = "https://apps.apple.com/app/id0000000000"; // ← put real link
-const INDUS_STORE_URL = "https://www.indusappstore.com/apps/traferr"; // ← put real link
+/** Optional: add real store URLs or leave empty strings to keep policy generic */
+const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.traferr"; // ← real link
+const APP_STORE_URL = "https://apps.apple.com/app/id0000000000"; // ← real link
+const INDUS_STORE_URL = "https://www.indusappstore.com/apps/traferr"; // ← real link
 
-/** Merge these new sections into your existing Privacy Policy `sections` array, or replace that array with this one. */
-const sections = [
+type Section = { heading: string; content: (string | JSX.Element)[] };
+
+const sections: Section[] = [
   {
     heading: "0. Company & App Store Availability",
     content: [
-      `The terms “Company,” “we,” or “us” refer to the owner of the application, Traferr. Traferr is available for download on major app stores${
-        GOOGLE_PLAY_URL || APP_STORE_URL || INDUS_STORE_URL
-          ? ` including Google Play (${GOOGLE_PLAY_URL || "reference"}), Apple App Store (${APP_STORE_URL || "reference"}), and Indus App Store (${INDUS_STORE_URL || "reference"}).`
-          : "."
-      }`,
+      (() => {
+        const anyStore = GOOGLE_PLAY_URL || APP_STORE_URL || INDUS_STORE_URL;
+        return anyStore ? (
+          <>
+            The terms “Company,” “we,” or “us” refer to the owner of the application, Traferr. Traferr is available for
+            download on major app stores including{" "}
+            {GOOGLE_PLAY_URL ? (
+              <a href={GOOGLE_PLAY_URL} className="underline" target="_blank" rel="noopener noreferrer">
+                Google Play
+              </a>
+            ) : (
+              "Google Play (reference)"
+            )}
+            {", "}
+            {APP_STORE_URL ? (
+              <a href={APP_STORE_URL} className="underline" target="_blank" rel="noopener noreferrer">
+                Apple App Store
+              </a>
+            ) : (
+              "Apple App Store (reference)"
+            )}
+            {", and "}
+            {INDUS_STORE_URL ? (
+              <a href={INDUS_STORE_URL} className="underline" target="_blank" rel="noopener noreferrer">
+                Indus App Store
+              </a>
+            ) : (
+              "Indus App Store (reference)"
+            )}
+            .
+          </>
+        ) : (
+          "The terms “Company,” “we,” or “us” refer to the owner of the application, Traferr. Traferr is available for download on major app stores."
+        );
+      })(),
       "References to download locations are for convenience only and do not change how this Privacy Policy applies to your use of Traferr.",
     ],
   },
@@ -56,7 +87,6 @@ const sections = [
   },
 ];
 
-/** You can keep your existing metadata or update it here */
 export const metadata: Metadata = {
   title: "Privacy Policy — Traferr",
   description:
@@ -82,7 +112,7 @@ export default function PrivacyPolicyAddendumPage() {
             <section key={section.heading} className="space-y-3">
               <h2 className="text-xl font-semibold text-slate-900">{section.heading}</h2>
               {section.content.map((paragraph, i) => (
-                <p key={i} className="text-sm text-slate-600">
+                <p key={`${section.heading}-${i}`} className="text-sm text-slate-600">
                   {paragraph}
                 </p>
               ))}
