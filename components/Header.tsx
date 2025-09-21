@@ -72,7 +72,7 @@ export function Header() {
             priority
             className="h-12 w-auto sm:h-14"
           />
-          <span className="text-xl font-black tracking-tight text-transparent bg-gradient-to-r from-sky-600 via-blue-500 to-indigo-500 bg-clip-text drop-shadow-sm sm:text-2xl md:text-3xl">
+          <span className="traferr-brand-text text-xl font-black tracking-[0.35em] drop-shadow-sm sm:text-2xl md:text-3xl">
             Traferr
           </span>
         </Link>
