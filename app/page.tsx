@@ -1,7 +1,7 @@
 import HowItWorks from "@/components/HowItWorks";
 import Image from "next/image";
-import Link from "next/link";
 import { SectionLink } from "@/components/SectionLink";
+import DownloadPopup from "@/components/DownloadPopup";
 
 const badges = [
   "Connect to Locals",
@@ -67,12 +67,7 @@ export default function Home() {
               </span>
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-sky-500 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-200/60 transition hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
-              >
-                Start a conversation
-              </Link>
+              <DownloadPopup />
               <SectionLink
                 targetId="how-it-works"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white/80 px-8 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
