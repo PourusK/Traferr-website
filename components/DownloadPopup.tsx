@@ -79,13 +79,13 @@ export default function DownloadPopup({ className = "" }: DownloadPopupProps) {
             <div className="grid gap-3 sm:grid-cols-2">
               <button
                 type="button"
-                className="inline-flex items-center justify-center rounded-full border-0 bg-gradient-to-r from-orange-500 via-amber-400 to-pink-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_30px_-16px_rgba(249,115,22,0.75)] transition hover:shadow-[0_18px_36px_-18px_rgba(249,115,22,0.85)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400"
+                className="inline-flex items-center justify-center rounded-full border-0 bg-gradient-to-r from-orange-500 via-amber-400 to-pink-500 px-6 py-3 text-sm font-semibold text-white shadow-none transition hover:shadow-[0_18px_36px_-18px_rgba(249,115,22,0.85)] focus-visible:shadow-[0_18px_36px_-18px_rgba(249,115,22,0.85)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400"
               >
                 Download Android
               </button>
               <button
                 type="button"
-                className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:border-slate-300 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+                className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-none transition hover:border-slate-300 hover:bg-slate-50 hover:shadow-[0_14px_30px_-18px_rgba(14,165,233,0.35)] focus-visible:shadow-[0_14px_30px_-18px_rgba(14,165,233,0.35)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
               >
                 Download Apple
               </button>
