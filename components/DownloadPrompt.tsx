@@ -13,11 +13,12 @@ const focusableSelectors =
 
 export default function DownloadPrompt() {
   const [isOpen, setIsOpen] = useState(false);
+  const isBrowser = typeof window !== "undefined";
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const previouslyFocusedElement = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
-    if (typeof document === "undefined") {
+    if (!isBrowser) {
       return () => undefined;
     }
 
@@ -41,10 +42,10 @@ export default function DownloadPrompt() {
     return () => {
       document.body.classList.remove("overflow-hidden");
     };
-  }, [isOpen]);
+  }, [isBrowser, isOpen]);
 
   useEffect(() => {
-    if (!isOpen || typeof document === "undefined") return;
+    if (!isOpen || !isBrowser || !dialogRef.current) return;
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -52,12 +53,12 @@ export default function DownloadPrompt() {
         return;
       }
 
-      if (event.key !== "Tab" || !dialogRef.current) {
+      if (event.key !== "Tab") {
         return;
       }
 
       const focusableElements = Array.from(
-        dialogRef.current.querySelectorAll<HTMLElement>(focusableSelectors),
+        dialogRef.current?.querySelectorAll<HTMLElement>(focusableSelectors) ?? [],
       ).filter((el) => !el.hasAttribute("disabled"));
 
       if (focusableElements.length === 0) {
@@ -83,7 +84,7 @@ export default function DownloadPrompt() {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isOpen]);
+  }, [isBrowser, isOpen]);
 
   return (
     <>
