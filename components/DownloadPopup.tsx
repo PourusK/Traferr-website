@@ -38,7 +38,12 @@ export default function DownloadPopup({ className = "" }: DownloadPopupProps) {
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className={`inline-flex items-center justify-center rounded-full bg-sky-500 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-200/60 transition hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 ${className}`.trim()}
+        aria-expanded={isOpen}
+        className={`inline-flex items-center justify-center rounded-full px-8 py-3 text-sm font-semibold text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${
+          isOpen
+            ? "bg-gradient-to-r from-orange-500 via-amber-400 to-pink-500 shadow-[0_14px_30px_-16px_rgba(249,115,22,0.75)] hover:shadow-[0_18px_36px_-18px_rgba(249,115,22,0.85)] focus-visible:outline-orange-400"
+            : "bg-sky-500 shadow-lg shadow-sky-200/60 hover:bg-sky-600 focus-visible:outline-sky-500"
+        } ${className}`.trim()}
       >
         Start a conversation
       </button>
