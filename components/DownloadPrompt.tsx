@@ -17,6 +17,10 @@ export default function DownloadPrompt() {
   const previouslyFocusedElement = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
+    if (typeof document === "undefined") {
+      return () => undefined;
+    }
+
     if (isOpen) {
       previouslyFocusedElement.current = document.activeElement as HTMLElement | null;
       document.body.classList.add("overflow-hidden");
@@ -24,7 +28,11 @@ export default function DownloadPrompt() {
       const firstFocusable = dialogRef.current?.querySelector<HTMLElement>(
         focusableSelectors,
       );
-      firstFocusable?.focus();
+
+      // Wait a frame before focusing so the element is guaranteed to exist.
+      if (firstFocusable) {
+        requestAnimationFrame(() => firstFocusable.focus());
+      }
     } else {
       document.body.classList.remove("overflow-hidden");
       previouslyFocusedElement.current?.focus?.();
@@ -36,7 +44,7 @@ export default function DownloadPrompt() {
   }, [isOpen]);
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen || typeof document === "undefined") return;
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
