@@ -7,19 +7,19 @@ const steps = [
     n: 1,
     title: "Choose your Localite or become one",
     body:
-      "Set your city (or where you’re headed) and pick the person who fits you best — or flip the switch and list yourself as a Localite.",
+      "Choose your location and what you’re looking for — from passions like diving, photography, or food to just meeting locals. Traferr connects you with people around your passions.",
   },
   {
     n: 2,
     title: "Get verified (everyone, always)",
     body:
-      "Quick checks give you a Verified badge. It keeps bots out and conversations safe — for visitors and for locals.",
+      "Browse locals who match your search — or explore more profiles. See their passions, pick someone you connect with,get verified and start your journey.",
   },
   {
     n: 3,
     title: "Connect & chat",
     body:
-      "Start a private, one-on-one conversation. Ask about routes, food, culture — or just swap life stories. No algorithms, just people.",
+      "Start a one-on-one chat. Share tips, swap stories, and connect over what you love. No algorithms, no noise — just real people",
   },
 ];
 
