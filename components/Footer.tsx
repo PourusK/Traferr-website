@@ -75,17 +75,17 @@ export function Footer() {
             </p>
             <div className="space-y-3 text-sm text-slate-400">
               <address className="not-italic leading-relaxed">
-                Suite 210, Marina Gate 1
-                <br /> Dubai Marina, UAE
+                Proudly Indian
+                <br /> Jogeshwari, Mumbai
               </address>
               <a
-                href="mailto:hello@traferr.com"
+                href="mailto:contact@traferr.com"
                 className="block transition hover:text-slate-100"
               >
-                hello@traferr.com
+                contact@traferr.com
               </a>
-              <a href="tel:+18005550199" className="block transition hover:text-slate-100">
-                +1 (800) 555-0199
+              <a href="tel:+919096171258" className="block transition hover:text-slate-100">
+                +91 90961 71258
               </a>
             </div>
           </div>
