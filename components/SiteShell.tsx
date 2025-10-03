@@ -113,8 +113,8 @@ export function SiteShell({ children }: SiteShellProps) {
         </div>
         <div className="border-t border-slate-200 bg-white/60">
           <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-4 py-4 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-            <p>© {year} Traferr. All rights reserved.</p>
-            <p>Built with care for traveler-first communities.</p>
+            <p>© {year} Traferr by Novazrehh Tech Solutions. All rights reserved.</p>
+            <p>Crafted for users who value people, not feeds.</p>
           </div>
         </div>
       </footer>
