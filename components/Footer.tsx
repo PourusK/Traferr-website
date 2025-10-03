@@ -93,8 +93,8 @@ export function Footer() {
 
         <div className="mt-16 border-t border-slate-800/70 pt-6">
           <div className="flex flex-col gap-2 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-            <p>© {year} Traferr. All rights reserved.</p>
-            <p>Built for curious travelers everywhere.</p>
+            <p>© {year} Traferr by Novazrehh Tech Solutions. All rights reserved.</p>
+            <p>Crafted for travelers who value people, not feeds.</p>
           </div>
         </div>
       </div>
