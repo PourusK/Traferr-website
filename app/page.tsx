@@ -115,7 +115,7 @@ export default function Home() {
             <div className="flex flex-col gap-8">
               <div className="max-w-2xl space-y-4">
                 <p className="text-sm font-semibold uppercase tracking-wide text-sky-600">
-                  WHY THIS, NOT FEEDS
+                  
                 </p>
                 <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
                   Feeds shout. Localites answer.
@@ -139,7 +139,7 @@ export default function Home() {
                   <ul className="mt-4 space-y-2 text-sm leading-relaxed text-slate-600">
                     <li>Chat with the person who walks those streets daily.</li>
                     <li>Ask follow-ups instantly—no threads to refresh.</li>
-                    <li>Verified humans. Current, lived context.</li>
+                    <li>Verified humans. Real context, right now.</li>
                     <li>Walk away knowing exactly what to do next.</li>
                   </ul>
                 </article>
