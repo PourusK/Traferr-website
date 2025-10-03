@@ -35,7 +35,7 @@ export default function HowItWorks() {
       >
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-sky-700">
-            How it works
+            
           </p>
           <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">
             How Traferr works
